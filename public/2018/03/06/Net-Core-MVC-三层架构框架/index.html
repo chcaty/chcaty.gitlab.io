@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/header.jpg?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/header.jpg?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/header.jpg?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/header.jpg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Caty">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content=".Net后台开发工程师">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://blog.chcaty.cn/categories/index.html">
+<meta property="og:site_name" content="小猫的代码之旅">
+<meta property="og:description" content=".Net后台开发工程师">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-05T18:28:50.059Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content=".Net后台开发工程师">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '6.0.0',
+    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.chcaty.cn/categories/">
+
+
+
+
+
+  <title>.Net Core MVC 三层架构框架 | 小猫的代码之旅</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">小猫的代码之旅</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.chcaty.cn/2018/03/06/Net-Core-MVC-三层架构框架/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="caty">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小猫的代码之旅">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">.Net Core MVC 三层架构框架</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T23:41:49+08:00">2018-03-06</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-03-11T22:20:06+08:00">2018-03-11</time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Net-Core/" itemprop="url" rel="index">
+                    <span itemprop="name">.Net Core</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">12k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">11 mins.</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Asp.Net Core 出来也很长时间,研究了一段时间,并基于Asp.Net Core + EF Core搭建了一个MVC的三层结构,其中用到了依赖注入和控制反转<br><a id="more"></a></p>
+<h4 id="BLL层"><a href="#BLL层" class="headerlink" title="BLL层"></a>BLL层</h4><h5 id="IBaseService-cs"><a href="#IBaseService-cs" class="headerlink" title="IBaseService.cs"></a>IBaseService.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.BLL.Interface</span></span><br><span class="line">&#123;</span><br><span class="line">    public interface IBaseService&lt;T&gt; where T:class,new()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function">IQueryable&lt;T&gt; <span class="title">LoadEntities</span>(<span class="params">System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda</span>)</span>;</span><br><span class="line">        IQueryable&lt;T&gt; LoadPageEntities&lt;s&gt;(<span class="keyword">int</span> pageIndex, <span class="keyword">int</span> pageSize, <span class="keyword">out</span> <span class="keyword">int</span> totalCount, System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda, System.Linq.Expressions.Expression&lt;Func&lt;T, s&gt;&gt; orderbyLambda, <span class="keyword">bool</span> isAsc);</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">DeleteEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">EditEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">        <span class="function">T <span class="title">AddEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="IService-cs"><a href="#IService-cs" class="headerlink" title="IService.cs"></a>IService.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.Model;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.BLL.Interface</span></span><br><span class="line">&#123;</span><br><span class="line">    public partial interface IFaceService : IBaseService&lt;Face&gt;</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public partial interface IPeopleService : IBaseService&lt;People&gt;</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BaseService-cs"><a href="#BaseService-cs" class="headerlink" title="BaseService.cs"></a>BaseService.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.Dal.Interface;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.BLL.Implements</span></span><br><span class="line">&#123;</span><br><span class="line">    public class BaseService&lt;T&gt; where T : class, new()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> IBaseDal&lt;T&gt; _baseDal;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">BaseService</span>(<span class="params">IBaseDal&lt;T&gt; baseDal</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _baseDal = baseDal;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//查询</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IQueryable&lt;T&gt; <span class="title">LoadEntities</span>(<span class="params">System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> _baseDal.LoadEntities(whereLambda);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//分页岔村</span></span><br><span class="line">        <span class="keyword">public</span> IQueryable&lt;T&gt; LoadPageEntities&lt;s&gt;(<span class="keyword">int</span> pageIndex, <span class="keyword">int</span> pageSize, <span class="keyword">out</span> <span class="keyword">int</span> totalCount, System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda, System.Linq.Expressions.Expression&lt;Func&lt;T, s&gt;&gt; orderbyLambda, <span class="keyword">bool</span> isAsc)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> _baseDal.LoadPageEntities&lt;s&gt;(pageIndex, pageSize, <span class="keyword">out</span> totalCount, whereLambda, orderbyLambda, isAsc);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 删除</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">DeleteEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _baseDal.DeleteEntity(entity);</span><br><span class="line">            <span class="keyword">return</span> _baseDal.SaveChanges();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 更新</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">EditEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _baseDal.EditEntity(entity);</span><br><span class="line">            <span class="keyword">return</span> _baseDal.SaveChanges();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 添加数据</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">AddEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _baseDal.AddEntity(entity);</span><br><span class="line">            _baseDal.SaveChanges();</span><br><span class="line">            <span class="keyword">return</span> entity;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Service-cs"><a href="#Service-cs" class="headerlink" title="Service.cs"></a>Service.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.BLL.Interface;</span><br><span class="line"><span class="keyword">using</span> Caty.Album.Dal.Interface;</span><br><span class="line"><span class="keyword">using</span> Caty.Album.Model;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Linq.Expressions;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.BLL.Implements</span></span><br><span class="line">&#123;</span><br><span class="line">    public partial class FaceService:BaseService&lt;Face&gt;,IFaceService</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> IFaceDal _faceDal;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">FaceService</span>(<span class="params">IFaceDal faceDal</span>):<span class="title">base</span>(<span class="params">faceDal</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _faceDal = faceDal;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public partial class PeopleService:BaseService&lt;People&gt;,IPeopleService</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> IPeopleDal _peopleDal;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">PeopleService</span>(<span class="params">IPeopleDal peopleDal</span>) : <span class="title">base</span>(<span class="params">peopleDal</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            _peopleDal = peopleDal;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Dal层"><a href="#Dal层" class="headerlink" title="Dal层"></a>Dal层</h4><h5 id="IBaseDal-cs"><a href="#IBaseDal-cs" class="headerlink" title="IBaseDal.cs"></a>IBaseDal.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.Dal.Interface</span></span><br><span class="line">&#123;</span><br><span class="line">    public interface IBaseDal&lt;T&gt; where T:class, new()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function">IQueryable&lt;T&gt; <span class="title">LoadEntities</span>(<span class="params">System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda</span>)</span>;</span><br><span class="line">        IQueryable&lt;T&gt; LoadPageEntities&lt;s&gt;(<span class="keyword">int</span> pageIndex, <span class="keyword">int</span> pageSize, <span class="keyword">out</span> <span class="keyword">int</span> totalCount, System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda, System.Linq.Expressions.Expression&lt;Func&lt;T, s&gt;&gt; orderbyLambda, <span class="keyword">bool</span> isAsc);</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">DeleteEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">EditEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">        <span class="function">T <span class="title">AddEntity</span>(<span class="params">T entity</span>)</span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">SaveChanges</span>(<span class="params"></span>)</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="IDal-cs"><a href="#IDal-cs" class="headerlink" title="IDal.cs"></a>IDal.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.Model;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.Dal.Interface</span></span><br><span class="line">&#123;</span><br><span class="line">    public partial interface IUserDal : IBaseDal&lt;User&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    public partial interface IRoleDal : IBaseDal&lt;Role&gt;</span><br><span class="line">    &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="BaseDal-cs"><a href="#BaseDal-cs" class="headerlink" title="BaseDal.cs"></a>BaseDal.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.Dal.Interface;</span><br><span class="line"><span class="keyword">using</span> Caty.Album.Model;</span><br><span class="line"><span class="keyword">using</span> Microsoft.EntityFrameworkCore;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.Dal.Implements</span></span><br><span class="line">&#123;</span><br><span class="line">    public class BaseDal&lt;T&gt; : IBaseDal&lt;T&gt; where T : class, new()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">protected</span> <span class="keyword">readonly</span> AlbumContext Db;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">BaseDal</span>(<span class="params">AlbumContext dbContext</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Db = dbContext;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 添加数据</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">AddEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Db.Set&lt;T&gt;().Add(entity);</span><br><span class="line">            <span class="comment">// Db.SaveChanges();</span></span><br><span class="line">            <span class="keyword">return</span> entity;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 删除</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">DeleteEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Db.Entry&lt;T&gt;(entity).State = EntityState.Deleted;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">// return Db.SaveChanges() &gt; 0;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 更新</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="entity"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">EditEntity</span>(<span class="params">T entity</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            Db.Entry&lt;T&gt;(entity).State = EntityState.Modified;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            <span class="comment">// return Db.SaveChanges() &gt; 0;</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 查询过滤</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="whereLambda"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> IQueryable&lt;T&gt; <span class="title">LoadEntities</span>(<span class="params">System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Db.Set&lt;T&gt;().Where&lt;T&gt;(whereLambda);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 分页</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;typeparam name="s"&gt;</span><span class="doctag">&lt;/typeparam&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="pageIndex"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="pageSize"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="totalCount"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="whereLambda"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="orderbyLambda"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="isAsc"&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="keyword">public</span> IQueryable&lt;T&gt; LoadPageEntities&lt;s&gt;(<span class="keyword">int</span> pageIndex, <span class="keyword">int</span> pageSize, <span class="keyword">out</span> <span class="keyword">int</span> totalCount, System.Linq.Expressions.Expression&lt;Func&lt;T, <span class="keyword">bool</span>&gt;&gt; whereLambda, System.Linq.Expressions.Expression&lt;Func&lt;T, s&gt;&gt; orderbyLambda, <span class="keyword">bool</span> isAsc)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">var</span> temp = Db.Set&lt;T&gt;().Where&lt;T&gt;(whereLambda);</span><br><span class="line">            totalCount = temp.Count();</span><br><span class="line">            <span class="keyword">if</span> (isAsc) <span class="comment">//升序</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp = temp.OrderBy&lt;T, s&gt;(orderbyLambda).Skip&lt;T&gt;((pageIndex - <span class="number">1</span>) * pageSize).Take&lt;T&gt;(pageSize);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                temp = temp.OrderByDescending&lt;T, s&gt;(orderbyLambda).Skip&lt;T&gt;((pageIndex - <span class="number">1</span>) * pageSize).Take&lt;T&gt;(pageSize);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> temp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> 一个业务中经常设计多张表操作,一次连接数据库完成所有数据的保存,提高性能,工作单元模式</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">bool</span> <span class="title">SaveChanges</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> Db.SaveChanges() &gt; <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="Dal-cs"><a href="#Dal-cs" class="headerlink" title="Dal.cs"></a>Dal.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Caty.Album.Dal.Interface;</span><br><span class="line"><span class="keyword">using</span> Caty.Album.Model;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.Dal.Implements</span></span><br><span class="line">&#123;</span><br><span class="line">    public partial class UserDal : BaseDal&lt;User&gt;, IUserDal</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">UserDal</span>(<span class="params">AlbumContext dbContext</span>) : <span class="title">base</span>(<span class="params">dbContext</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    public partial class RoleDal : BaseDal&lt;Role&gt;, IRoleDal</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">RoleDal</span>(<span class="params">AlbumContext dbContext</span>) : <span class="title">base</span>(<span class="params">dbContext</span>)</span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Model层"><a href="#Model层" class="headerlink" title="Model层"></a>Model层</h4><h5 id="AlbumContext-cs"><a href="#AlbumContext-cs" class="headerlink" title="AlbumContext.cs"></a>AlbumContext.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Microsoft.EntityFrameworkCore;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Caty.Album.Model</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">AlbumContext</span>:<span class="title">DbContext</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">AlbumContext</span>(<span class="params"></span>) : <span class="title">base</span>(<span class="params"></span>) </span>&#123; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">AlbumContext</span>(<span class="params">DbContextOptions options</span>) : <span class="title">base</span>(<span class="params">options</span>) </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;User&gt; Users &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;Role&gt; Roles &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;Right&gt; Rights &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;UserRole&gt; UserRoles &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;UserRight&gt; UserRights &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;RoleRight&gt; RoleRights &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;Face&gt; Faces &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;Group&gt; Groups &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;People&gt; Peoples &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> DbSet&lt;PeopleGroup&gt; PeopleGroups &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h4><p>修改Stratup.cs下的ConfigureServices方法的代码</p>
+<h5 id="Startup-cs"><a href="#Startup-cs" class="headerlink" title="Startup.cs"></a>Startup.cs</h5><figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ConfigureServices</span>(<span class="params">IServiceCollection services</span>)</span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">       <span class="comment">//添加ef的依赖  </span></span><br><span class="line">       <span class="keyword">var</span> connection = <span class="string">"server=.;uid=sa;pwd=123;database=AlbumDb"</span>;</span><br><span class="line">       services.AddDbContext&lt;AlbumContext&gt;(options =&gt; options.UseSqlServer(connection));</span><br><span class="line">       services.AddScoped&lt;DbContext, AlbumContext&gt;();</span><br><span class="line">       services.AddMvc();</span><br><span class="line"></span><br><span class="line">       <span class="meta">#<span class="meta-keyword">region</span> 依赖注入</span></span><br><span class="line">       services.AddScoped&lt;IFaceDal, FaceDal&gt;();</span><br><span class="line">       services.AddScoped&lt;IPeopleDal, PeopleDal&gt;();</span><br><span class="line">       services.AddScoped&lt;IGroupDal, GroupDal&gt;();</span><br><span class="line">       services.AddScoped&lt;IPeopleGroupDal, PeopleGroupDal&gt;();</span><br><span class="line">       services.AddScoped&lt;IFaceService, FaceService&gt;();</span><br><span class="line">       services.AddScoped&lt;IPeopleService, PeopleService&gt;();</span><br><span class="line">       services.AddScoped&lt;IGroupService, GroupService&gt;();</span><br><span class="line">       services.AddScoped&lt;IPeopleGroupService, PeopleGroupService&gt;();</span><br><span class="line">       <span class="meta">#<span class="meta-keyword">endregion</span></span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    caty
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://blog.chcaty.cn/2018/03/06/Net-Core-MVC-三层架构框架/" title=".Net Core MVC 三层架构框架">http://blog.chcaty.cn/2018/03/06/Net-Core-MVC-三层架构框架/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Net-Core/" rel="tag"># .Net Core</a>
+          
+            <a href="/tags/MVC/" rel="tag"># MVC</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/06/Net-爬虫封装/" rel="next" title=".Net 爬虫封装">
+                <i class="fa fa-chevron-left"></i> .Net 爬虫封装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/07/Net-Core-配置与自动更新/" rel="prev" title=".Net Core 配置与自动更新">
+                .Net Core 配置与自动更新 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">caty</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chcaty" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1120873075@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://blog.wayneshao.com/" title="玮仔" target="_blank">玮仔</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://yumengjing.github.io/" title="羽梦" target="_blank">羽梦</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#BLL层"><span class="nav-number">1.</span> <span class="nav-text">BLL层</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#IBaseService-cs"><span class="nav-number">1.1.</span> <span class="nav-text">IBaseService.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IService-cs"><span class="nav-number">1.2.</span> <span class="nav-text">IService.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BaseService-cs"><span class="nav-number">1.3.</span> <span class="nav-text">BaseService.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Service-cs"><span class="nav-number">1.4.</span> <span class="nav-text">Service.cs</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dal层"><span class="nav-number">2.</span> <span class="nav-text">Dal层</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#IBaseDal-cs"><span class="nav-number">2.1.</span> <span class="nav-text">IBaseDal.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IDal-cs"><span class="nav-number">2.2.</span> <span class="nav-text">IDal.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#BaseDal-cs"><span class="nav-number">2.3.</span> <span class="nav-text">BaseDal.cs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Dal-cs"><span class="nav-number">2.4.</span> <span class="nav-text">Dal.cs</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Model层"><span class="nav-number">3.</span> <span class="nav-text">Model层</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#AlbumContext-cs"><span class="nav-number">3.1.</span> <span class="nav-text">AlbumContext.cs</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入"><span class="nav-number">4.</span> <span class="nav-text">依赖注入</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Startup-cs"><span class="nav-number">4.1.</span> <span class="nav-text">Startup.cs</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">caty</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数&#58;</span>
+    
+    <span title="站点总字数">245k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总阅读次数&#58;</span>
+    
+    <span title="站点总阅读次数">3:43</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@latest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"right","hOffset":40,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"tag_cloud":{"textFont":"Trebuchet MS, Helvetica","textColor":"#17202A","textHeight":25,"outlineColor":"#E2E1D1","maxSpeed":0.5},"log":false});</script></body>
+</html>
