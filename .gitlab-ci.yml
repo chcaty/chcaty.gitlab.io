@@ -1,16 +1,19 @@
+image: node:10.15.3
+
+cache:
+  paths:
+    - node_modules/
+
 before_script:
-- apt-get update -qq && apt-get install -y -qq pandoc
-image: node:9.8.0
+  - npm install hexo-cli -g
+  - test -e package.json && npm install
+  - hexo generate
+
 pages:
-    cache:
-        paths:
-        - node_modules/
-    script:
-    - npm install hexo-cli -g
-    - npm install
-    - hexo deploy
-    artifacts:
-        paths:
-        - public
-    only:
+  script:
+    - hexo generate
+  artifacts:
+    paths:
+      - public
+  only:
     - master
