@@ -1,5 +1,7 @@
 {% extends '_layout.swig' %}
 {% import '_macro/sidebar.swig' as sidebar_template %}
+{# 自定义爱心标签云 #}
+{% include 'tag-love.swig' %}
 
   {% block title %}{#
   #}{% set page_title_suffix = ' | ' + config.title %}{#
@@ -30,11 +32,17 @@
         {# tagcloud page support #}
         {% if page.type === "tags" %}
           <div class="tag-cloud">
-            <div class="tag-cloud-title">
+            <div class="tag-cloud-title" >
                 {{ _p('counter.tag_cloud', site.tags.length) }}
             </div>
+            <div class="tag-cloud-tags" hidden>
+                {{ tagcloud({min_font: 10, max_font: 15, amount: 300, color: true, start_color: '#ccc', end_color: '#111'}) }}
+            </div>
            {# tagcanvas plugin 球型云标签 #}
-           {% include '_partials/plugin/tagcanvas.swig' %}
+           {#{% include '_partials/plugin/tagcanvas.swig' %}#}
+
+           {# 自定义爱心标签云 #}
+           {% include 'tag-love.swig' %}
           </div>
         {% elif page.type === 'categories' %}
           <div class="category-all-page">
