@@ -46,3 +46,14 @@ IsControl | 值小于 0x20 的不可打印的控制字符.例如 \r, \n, \t, \0 
 幂运算 | Pow, Exp
 对数运算 |Log, Log10
 三角函数 | Sin, Cos, Tan, Sinh, Cosh, Tanh, Asin, Acos, Atan
+
+### 线程
+
+* 调用Thread的Join方法可以等待线程结束，Thread.Sleep方法将当前线程的执行暂停指定的时间;在等待线程Sleep或者Join的过程中,线程是阻塞(blocked)的.
+* Thread.Sleep(0)将会导致线程立即放弃自己的时间片,自觉地将CPU交于其他的线程.Thread.Yield()执行相同的操作,但是它仅仅会将资源交给同一个处理器上运行的线程.
+* Sleep(0)和Yield在高级性能调优方面非常有用.同时它还是一种很好的诊断工具.可用于帮助开发者发现与线程安全相关的问题;如果在代码的任意位置插入Thread.Yield()导致程序失败,则代码一定是存在缺陷的.
+* 一般情况下,显式创建的线程称为前台线程.只要有一个前台线程还在运行,应用程序就仍然保持运行状态.而后台线程则不然.当所有前台线程结束时,应用程序就会停止,且所有运行的后台线程也会随之终止.可以使用线程的IsBackground属性来查询或修改线程的前后台状态.
+* 如果想要在工作线程上更新UI,就必须将请求发送给UI线程,这种技术叫封迭.实现这个操作的底层方式有:
+    1. 在WPF中,调用元素上的Dispatcher对象的BeginInoke或Invoke方法.
+    2. 在UWP应用中.可以调用Dispatcher对象的RunAsync或Invoke方法.
+    3. 在Windows Forms应用中,调用控件的BeginInvoke或Invoke方法.
