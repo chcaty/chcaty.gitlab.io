@@ -8,6 +8,7 @@ before_script:
   - npm install
   - npm install hexo-cli -g
   - test -e package.json && npm install
+  - hexo clean
   - hexo generate
 
 pages:
