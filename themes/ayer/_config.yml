@@ -13,8 +13,8 @@ menu:
 # https://github.com/mattboldt/typed.js
 subtitle:
   enable: true # 是否开启动效
-  text: 面朝大海，春暖花开 # 显示的文字
-  text2: 愿你一生努力，一生被爱 # 滚动播放，如果不需要可以留空
+  text: 愿你三冬暖，愿你春不寒 # 显示的文字
+  text2: 很多事都是有时限的 # 滚动播放，如果不需要可以留空
   text3: 想要的都拥有，得不到的都释怀 # 最多支持三段文字
   startDelay: 0 # 延迟时间
   typeSpeed: 200 # 打字速度
@@ -122,7 +122,7 @@ layout:
 # GitHub Ribbons-封面右上角的forkme，换样式直接在source/images目录下替换forkme图片
 github:
   # (关闭请设置为false)
-  enable: true
+  enable: false
   url: https://github.com/Shen-Yu/hexo-theme-ayer
 
 # 网易云音乐插件
@@ -177,35 +177,23 @@ gongan:
 
 # 友情链接
 friends_link:
-  Ayer主题: #网站名称
+  玮仔Wayne: #网站名称
     #网站地址
-    url: https://github.com/Shen-Yu/hexo-theme-ayer
-    #网站图片(可忽略不写)
-    img: /images/ayer.png
-  GitHub:
-    url: https://github.com/Shen-Yu
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/github.png
-  码云:
-    url: https://gitee.com/shen-yu
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/gitee.png
-  Hexo官网:
-    url: https://hexo.io
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo.png
-  Hexo图表插件:
-    url: https://github.com/Shen-Yu/hexo-tag-chart
-    img: https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/img/hexo-tag-chart.png
+    url: http://blog.wayneshao.com
+  羽梦:
+    url: https://yumengjing.github.io
 
 # 评论：1、Valine(推荐)；2、Gitalk；3、Twikoo; 4.MiniValine
 
 # 1、Valine[一款快速、简洁且高效的无后端评论系统](https://github.com/xCss/Valine)
 # 启用Valine必须先创建leancloud应用， 获取 id|key 填入即可
 leancloud:
-  enable: true
+  enable: false
   app_id: #
   app_key: #
 # Valine配置
 valine:
-  enable: true # 是否启用
+  enable: false # 是否启用
   avatar: monsterid # 头像样式(https://valine.js.org/avatar.html)
   placeholder: 给我的文章加点评论吧~ # placeholder
 

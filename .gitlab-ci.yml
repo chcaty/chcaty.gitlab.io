@@ -5,6 +5,7 @@ cache:
     - node_modules/
 
 before_script:
+  - npm uninstall hexo-theme-ayer
   - npm install
   - npm install hexo-cli -g
   - test -e package.json && npm install
