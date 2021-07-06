@@ -29,9 +29,9 @@ deploy_hexo_job:
     - echo "version:$COMMIT_TIME_STR"
     - echo "$DEV_URL"
     # 部署blog
-    - lftp sftp://$DEV_URL -e "user $DEV_USER $DEV_PASS; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
-    - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "cd /root/blog;unzip -o ./$COMMIT_TIME_STR.zip;rm -Rf ./$COMMIT_TIME_STR.zip;"
-    - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "service nginx restart;"
+    - lftp sftp://81.69.220.31 -e "user root @pF9NhK2z%8[C; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
+    - sshpass -p "@pF9NhK2z%8[C" ssh -o StrictHostKeyChecking=no root@81.69.220.31 "cd /root/blog;unzip -o ./$COMMIT_TIME_STR.zip;rm -Rf ./$COMMIT_TIME_STR.zip;"
+    - sshpass -p "@pF9NhK2z%8[C" ssh -o StrictHostKeyChecking=no root@81.69.220.31 "service nginx restart;"
     # 删除压缩包
     - rm -Rf ./$COMMIT_TIME_STR.zip
   artifacts:
