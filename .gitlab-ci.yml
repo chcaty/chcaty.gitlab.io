@@ -24,7 +24,7 @@ deploy_hexo_job:
     - hexo clean
     - hexo generate
     # 压缩
-    - cd source/public
+    - cd public
     - zip -r $COMMIT_TIME_STR.zip ./
     # 部署blog
     - lftp sftp://$DEV_URL -e "user $DEV_USER $DEV_PASS; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
