@@ -2,6 +2,10 @@ stages:
   - hexo_run
   - deploy_hexo
 
+cache:
+  paths:
+    - node_modules/
+
 before_script:
   - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
   - export COMMIT_TIME_STR=$(date -d @$COMMIT_TIME +%Y%m%d%H%M%S)
@@ -20,7 +24,7 @@ deploy_hexo_job:
     - hexo clean
     - hexo generate
     # 压缩
-    - cd source/publish
+    - cd source/public
     - zip -r $COMMIT_TIME_STR.zip ./
     # 部署blog
     - lftp sftp://$DEV_URL -e "user $DEV_USER $DEV_PASS; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
@@ -28,5 +32,8 @@ deploy_hexo_job:
     - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "service nginx restart;"
     # 删除压缩包
     - rm -Rf ./$COMMIT_TIME_STR.zip
+  artifacts:
+    paths:
+      - public
   only:
     - master
