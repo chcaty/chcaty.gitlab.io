@@ -1,22 +1,32 @@
-image: node:latest
-
-cache:
-  paths:
-    - node_modules/
+stages:
+  - hexo_run
+  - deploy_hexo
 
 before_script:
-  - npm uninstall hexo-theme-ayer
-  - npm install
-  - npm install hexo-cli -g
-  - test -e package.json && npm install
-  - hexo clean
-  - hexo generate
+  - export COMMIT_TIME=$(git show -s --format=%ct $CI_COMMIT_SHA)
+  - export COMMIT_TIME_STR=$(date -d @$COMMIT_TIME +%Y%m%d%H%M%S)
 
-pages:
+hexo_run_job:
+  stage: hexo_run
+  only:
+    - master
   script:
+    - test -e package.json && npm install
+
+deploy_hexo_job:
+  stage: deploy_hexo
+  script:
+    # 发布
+    - hexo clean
     - hexo generate
-  artifacts:
-    paths:
-      - public
+    # 压缩
+    - cd source/publish
+    - zip -r $COMMIT_TIME_STR.zip ./
+    # 部署blog
+    - lftp sftp://$DEV_URL -e "user $DEV_USER $DEV_PASS; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
+    - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "cd /root/blog;unzip -o ./$COMMIT_TIME_STR.zip;rm -Rf ./$COMMIT_TIME_STR.zip;"
+    - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "service nginx restart;"
+    # 删除压缩包
+    - rm -Rf ./$COMMIT_TIME_STR.zip
   only:
     - master
