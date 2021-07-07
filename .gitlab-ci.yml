@@ -27,7 +27,6 @@ deploy_hexo_job:
     - cd public
     - zip -r $COMMIT_TIME_STR.zip ./
     - echo "version:$COMMIT_TIME_STR"
-    - echo "$DEV_URL"
     # 部署blog
     - lftp sftp://$DEV_URL -e "user $DEV_USER $DEV_PASS; cd /root/blog; put $COMMIT_TIME_STR.zip; bye"
     - sshpass -p "$DEV_PASS" ssh -o StrictHostKeyChecking=no $DEV_USER@$DEV_URL "cd /root/blog;unzip -o ./$COMMIT_TIME_STR.zip;rm -Rf ./$COMMIT_TIME_STR.zip;"
