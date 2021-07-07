@@ -6,12 +6,16 @@ tags:
  - .Net Core
  - 设计模式
 ---
+
 ##### 单例模式的定义
+
 单体模式保证一个类只有一个实例, 并提供一个全局访问该实例的方法
 <!--more-->
 
 ##### .Net Core实现单例模式的代码
+
 ###### ChocolateBoiler.cs
+
 ```cs
 namespace SingletonPattern
 {
@@ -62,6 +66,7 @@ namespace SingletonPattern
 ```
 
 ###### SynchronizedChocolateBoiler.cs
+
 ```cs
 using System.Runtime.CompilerServices;
 namespace SingletonPattern
@@ -115,6 +120,7 @@ namespace SingletonPattern
 ```
 
 ###### DoubleCheckChocolateBoiler.cs
+
 ```cs
 namespace SingletonPattern
 {

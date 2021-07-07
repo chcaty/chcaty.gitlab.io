@@ -6,13 +6,18 @@ tags:
  - 加密
  - C#
 ---
+
 #### 起源
-最近负责的一个项目,对接的东西刚好有需要用到AES加密,就顺便学习记录一下
+
+最近负责的一个项目, 对接的东西刚好有需要用到AES加密, 就顺便学习记录一下
 <!--more-->
+
 #### Aes是什么
-在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准,是对称密钥加密中最流行的算法之一
+
+在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准, 是对称密钥加密中最流行的算法之一
 
 #### Aes加密
+
 ```cs
 /// <summary>
 /// Aes加密 
@@ -50,6 +55,7 @@ public static string AesEncrypt(string text, string password, string iv)
 ```
 
 #### Aes解密
+
 ```cs
 /// <summary>
 /// Aes解密
@@ -84,6 +90,7 @@ public static string AesDecrypt(string text, string password, string iv)
 ```
 
 #### 调用
+
 ```cs
 static void Main(string[] args)
 {

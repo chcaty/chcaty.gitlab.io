@@ -25,7 +25,7 @@ Asp.Net Core 可以通过ResponseCache设定Response的暂存方式,并设置到
 
 ##### Client 端缓存设置
 
-*HomeController.cs*
+HomeController.cs
 
 ```cs
 public class HomeController : Controller
@@ -109,7 +109,7 @@ Server快取需要用到 Microsoft.AspNetCore.ResponseCaching 套件.
 
 ##### Service 端快取设置
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup

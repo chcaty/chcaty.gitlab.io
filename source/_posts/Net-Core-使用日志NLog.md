@@ -6,16 +6,18 @@ tags:
  - .Net Core
  - NLog
 ---
-将 ASP.NET Core 提供的默认日志提供程序替换成 NLog。
+将 ASP.Net Core 提供的默认日志提供程序替换成 NLog。
 <!--more-->
 
 ##### 添加相关依赖
-```
+
+```cs
 Install-Package NLog.Extensions.Logging -Pre
 Install-Package NLog.Web.AspNetCore
 ```
 
 ##### 创建好Nlog配置文件(nlog.config)
+
 ```cs
 <?xml version="1.0" encoding="utf-8" ?>  
 <nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"  
@@ -50,6 +52,7 @@ Install-Package NLog.Web.AspNetCore
 ```
 
 ##### Startup.cs中添加使用的服务
+
 ```cs
 public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)  
 {
@@ -60,6 +63,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 ```
 
 ##### 使用日志
+
 ```cs
 //获得日志的实例  
 static Logger Logger = LogManager.GetCurrentClassLogger();  

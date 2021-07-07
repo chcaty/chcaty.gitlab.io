@@ -6,12 +6,16 @@ tags:
  - .Net Core
  - 设计模式
 ---
+
 ##### 观察者模式的定义
-一个目标物件管理所有相依于它的观察者物件,并且在它本身的状态改变时主动发出通知
+
+一个目标物件管理所有相依于它的观察者物件, 并且在它本身的状态改变时主动发出通知
 <!--more-->
 
 ##### .Net Core实现观察者模式的代码
+
 ###### Person.cs
+
 ```cs
 using System;
 namespace ObserverPattern
@@ -29,6 +33,7 @@ namespace ObserverPattern
 ```
 
 ###### FallsIllEventArgs.cs
+
 ```cs
 using System;
 namespace ObserverPattern
@@ -43,6 +48,7 @@ namespace ObserverPattern
 ```
 
 ##### Program.cs
+
 ```cs
 using System;
 namespace ObserverPattern

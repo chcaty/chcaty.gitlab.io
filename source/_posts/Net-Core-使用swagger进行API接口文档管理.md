@@ -6,14 +6,18 @@ tags:
  - .Net Core
  - WebApi
 ---
+
 ##### 什么是Swagger
-Swagger可以从不同的代码中,根据注释生成API信息,swagger拥有强大的社区,并且对于各种语言都支持良好,有很多的工具可以通过swagger生成的文件生成API文档
+
+Swagger可以从不同的代码中, 根据注释生成API信息, swagger拥有强大的社区, 并且对于各种语言都支持良好, 有很多的工具可以通过swagger生成的文件生成API文档
 <!--more-->
 
 ##### .Net Core中使用
-.Net Core中使用,首先要用nuget引用Swashbuckle.AspNetCore,在startup.cs中加入如下代码
+
+.Net Core中使用, 首先要用nuget引用Swashbuckle. AspNetCore, 在startup.cs中加入如下代码
 
 ###### Startup.cs
+
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
@@ -50,8 +54,10 @@ public void Configure(IApplicationBuilderapp, IHostingEnvironment env)
 }
 ```
 
-以上部分为加载swagger的代码,位于startup.cs中,下面是controller代码
+以上部分为加载swagger的代码, 位于startup.cs中, 下面是controller代码
+
 ###### ValuesController.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -149,4 +155,3 @@ namespace WebApplication2.Controllers
     }
 }
 ```
-

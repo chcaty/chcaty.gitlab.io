@@ -6,21 +6,26 @@ tags:
  - .Net Core
  - 设计模式
 ---
+
 ##### 抽象工厂的定义
-抽象工厂提供了一个接口,这个接口可以创建一族相关或依赖的对象而无需指明它们具体的类.
+
+抽象工厂提供了一个接口, 这个接口可以创建一族相关或依赖的对象而无需指明它们具体的类.
 <!--more-->
 
 ##### 工厂方法和抽象工厂的比较
-工厂方法是通过继承来实现创建对象工作的,而抽象工厂则是通过组合的方法.
-工厂方法是让子类来创建对象,客户只需要知道抽象类,子类做具体的实现,解耦.
-抽象工厂提供了一个可以创建一族产品的抽象类,这个类的实现类/子类决定产品是如何产出的,也是解耦.
-抽象工厂的优点是:可以创建一族相关的产品.缺点是它的接口比较大,如果添加了产品需要改接口.
+
+工厂方法是通过继承来实现创建对象工作的, 而抽象工厂则是通过组合的方法.
+工厂方法是让子类来创建对象, 客户只需要知道抽象类, 子类做具体的实现, 解耦.
+抽象工厂提供了一个可以创建一族产品的抽象类, 这个类的实现类/子类决定产品是如何产出的, 也是解耦.
+抽象工厂的优点是: 可以创建一族相关的产品. 缺点是它的接口比较大, 如果添加了产品需要改接口.
 而工厂方法只负责生产一个产品.
 抽象工厂也经常使用工厂方法来实现具体的工厂.
-而工厂方法也经常使用抽象的创造者,它来使用子类创建出的具体产品.
+而工厂方法也经常使用抽象的创造者, 它来使用子类创建出的具体产品.
 
 ##### .Net Core实现抽象工厂
+
 ###### IGredient.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -32,6 +37,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### ICheese.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -43,6 +49,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### IClams.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -54,6 +61,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### IDough.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -65,6 +73,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### ISauce.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -76,6 +85,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### IPizzalngredientFactory.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -90,6 +100,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### PizzaStore.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {
@@ -111,6 +122,7 @@ namespace AbtractFactoryPattern.Abstractions
 ```
 
 ###### Pizza.cs
+
 ```cs
 namespace AbtractFactoryPattern.Abstractions
 {

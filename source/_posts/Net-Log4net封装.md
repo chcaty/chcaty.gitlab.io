@@ -9,7 +9,9 @@ tags:
 log4net是.Net下一个非常优秀的开源日志记录组件。log4net记录日志的功能非常强大。它可以将日志分不同的等级，以不同的格式，输出到不同的媒介。
 封装如下
 <!--more-->
+
 #### ILoger.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -37,6 +39,7 @@ namespace Caty.Album.Utilities.Log
 ```
 
 #### Log4netLoger.cs
+
 ```cs
 using log4net;
 using log4net.Repository;
@@ -168,7 +171,6 @@ namespace Caty.Album.Utilities.Log
             //}
             //message = build.ToString();
 
-
             //if (type == null)
             //{
             //    type = Type.GetType("System.Object");
@@ -231,6 +233,7 @@ namespace Caty.Album.Utilities.Log
 ```
 
 #### Loger.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -269,6 +272,7 @@ namespace Caty.Album.Utilities.Log
 ```
 
 #### LogMessageType.cs
+
 ```cs
 using System;
 using System.Collections.Generic;

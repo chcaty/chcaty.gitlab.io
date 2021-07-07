@@ -17,7 +17,7 @@ SignalR 是一套能让Asp.Net Core 轻松实现与Client即时互动的套件.
 
 在Startup.CofigureServices 加入SignalR的服务,同时在Startup.Configure将SignalR加到管道中.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 using Microsoft.AspNetCore.SignalR;
@@ -60,7 +60,7 @@ namespace SignalRChat.Hubs
 
 * 将“目标位置”设置为 wwwroot/lib/signalr/，然后选择“安装”
 
-*chat.js*
+chat.js
 
 ```cs
 "use strict";
@@ -94,7 +94,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
 });
 ```
 
-*Index.cshtml*
+Index.cshtml
 
 ```cs
 @page

@@ -6,10 +6,13 @@ tags:
  - .Net Core
  - MVC
 ---
-Asp.Net Core 出来也很长时间,研究了一段时间,并基于Asp.Net Core + EF Core搭建了一个MVC的三层结构,其中用到了依赖注入和控制反转
+Asp.Net Core 出来也很长时间, 研究了一段时间, 并基于Asp.Net Core + EF Core搭建了一个MVC的三层结构, 其中用到了依赖注入和控制反转
 <!--more-->
+
 #### BLL层
+
 ##### IBaseService.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -30,6 +33,7 @@ namespace Caty.Album.BLL.Interface
 ```
 
 ##### IService.cs
+
 ```cs
 using Caty.Album.Model;
 using System;
@@ -50,6 +54,7 @@ namespace Caty.Album.BLL.Interface
 ```
 
 ##### BaseService.cs
+
 ```cs
 using Caty.Album.Dal.Interface;
 using System;
@@ -112,6 +117,7 @@ namespace Caty.Album.BLL.Implements
 ```
 
 ##### Service.cs
+
 ```cs
 using Caty.Album.BLL.Interface;
 using Caty.Album.Dal.Interface;
@@ -145,7 +151,9 @@ namespace Caty.Album.BLL.Implements
 ```
 
 #### Dal层
+
 ##### IBaseDal.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -168,6 +176,7 @@ namespace Caty.Album.Dal.Interface
 ```
 
 ##### IDal.cs
+
 ```cs
 using Caty.Album.Model;
 using System;
@@ -190,6 +199,7 @@ namespace Caty.Album.Dal.Interface
 ```
 
 ##### BaseDal.cs
+
 ```cs
 using Caty.Album.Dal.Interface;
 using Caty.Album.Model;
@@ -289,6 +299,7 @@ namespace Caty.Album.Dal.Implements
 ```
 
 ##### Dal.cs
+
 ```cs
 using Caty.Album.Dal.Interface;
 using Caty.Album.Model;
@@ -318,7 +329,9 @@ namespace Caty.Album.Dal.Implements
 ```
 
 #### Model层
+
 ##### AlbumContext.cs
+
 ```cs
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -347,8 +360,11 @@ namespace Caty.Album.Model
 ```
 
 #### 依赖注入
+
 修改Stratup.cs下的ConfigureServices方法的代码
+
 ##### Startup.cs
+
 ```cs
  public void ConfigureServices(IServiceCollection services)
     {

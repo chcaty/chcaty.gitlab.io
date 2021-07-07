@@ -6,37 +6,43 @@ tags:
  - .Net Core
  - Session
 ---
+
 ##### 添加Session
-在你的项目上基于NuGet添加：Microsoft.AspNetCore.Session。
+
+在你的项目上基于NuGet添加：Microsoft. AspNetCore. Session。
 <!--more-->
 
 ##### 修改Startup.cs
-在startup.cs找到方法ConfigureServices(IServiceCollection services) 注入Session(这个地方是Asp.net Core pipeline):services.AddSession();
 
-接下来我们要告诉Asp.net Core使用内存存储Session数据，在Configure(IApplicationBuilder app,...)中添加代码:app.UseSession();
+在startup.cs找到方法ConfigureServices(IServiceCollection services) 注入Session(这个地方是Asp.net Core pipeline):services. AddSession();
+
+接下来我们要告诉Asp.net Core使用内存存储Session数据，在Configure(IApplicationBuilder app, ...)中添加代码:app. UseSession();
 
 ##### Session
+
 1. 在MVC Controller里使用HttpContext.Session
-```cs
-using Microsoft.AspNetCore.Http;
 
-public class HomeController:Controller
-{
-    public IActionResult Index()
-    {
-        HttpContext.Session.SetString("code","123456");
-        return View();  
-    }
+    ```cs
+    using Microsoft.AspNetCore.Http;
 
-    public IActionResult About()
+    public class HomeController:Controller
     {
-        ViewBag.Code=HttpContext.Session.GetString("code");
-        return View();
+        public IActionResult Index()
+        {
+            HttpContext.Session.SetString("code","123456");
+            return View();  
+        }
+
+        public IActionResult About()
+        {
+            ViewBag.Code=HttpContext.Session.GetString("code");
+            return View();
+        }
     }
-}
-```
+    ```
 
 2. 如果不是在Controller里，你可以注入IHttpContextAccessor
+
 ```cs
 public class SomeOtherClass
 {
@@ -61,7 +67,9 @@ public class SomeOtherClass
 ```
 
 ##### 存储复杂对象
+
 存储对象时把对象序列化成一个json字符串存储。
+
 ```cs
 public static class SessionExtensions
 {
@@ -87,11 +95,13 @@ var myComplexObject = HttpContext.Session.GetObjectFromJson<MyClass>("Test");
 ```
 
 ##### 使用SQL Server或Redis存储
+
 1、SQL Server
 
-添加引用  "Microsoft.Extensions.Caching.SqlServer": "1.0.0"
+添加引用  "Microsoft. Extensions. Caching. SqlServer": "1.0.0"
 
 注入：
+
 ```cs
 // Microsoft SQL Server implementation of IDistributedCache.
 // Note that this would require setting up the session state database.
@@ -105,9 +115,10 @@ services.AddSqlServerCache(o =>
 
 2、Redis
 
-添加引用   "Microsoft.Extensions.Caching.Redis": "1.0.0"
+添加引用   "Microsoft. Extensions. Caching. Redis": "1.0.0"
 
 注入：
+
 ```cs
 // Redis implementation of IDistributedCache.
 // This will override any previously registered IDistributedCache service.

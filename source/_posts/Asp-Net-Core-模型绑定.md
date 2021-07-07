@@ -7,10 +7,13 @@ tags:
  - Model
 ---
 #### 概述
+
 ASP.NET Core MVC 的模型绑定会把Http Request 中的数据，以映射的方式对应到相应的参数中去.
 <!--more-->
 #### 模型绑定
+
 要接收Client传来的数据,可以通过Action的参数接收,如下:
+
 ```cs
 using Microsft.AspNetCore,Mvc;
 
@@ -25,9 +28,11 @@ namespace Caty.Web.Controllers
     }
 }
 ```
+
 其中username和password就是从Http Requset的数据被绑定的模型参数.
 
 默认的模型绑定会从Http Requset的三个地方取值(优先级由上到下)
+
 * Form
 
   通过Http Post的Form取值
@@ -43,6 +48,7 @@ namespace Caty.Web.Controllers
 如果三者都传入,取值的优先顺序为Form>Route>Query
 
 #### 绑定属性
+
 除了上面提到的三个默认的绑定来源外,还可以通过模型绑定属性从Http Request的其他地方中绑定参数,有以下6个类别:
 
 * \[FromHeader\]
@@ -124,7 +130,7 @@ public class UserModel
 
 模型绑定也可以验证模型,需要在模型的属性上面带上 ValidationAttributes.
 
-*UserModel.cs*
+UserModel.cs
 
 ```cs
 public class UserModel
@@ -141,7 +147,7 @@ public class UserModel
 }
 ```
 
-*UserController.cs*
+UserController.cs
 
 ```cs
 using Microsoft.AspNetCore.Mvc;
@@ -164,7 +170,7 @@ namespace MyWebsite.Controllers
 
 #### 自定义模型验证
 
-*UserModel.cs*
+UserModel.cs
 
 ```cs
 public class UserModel
@@ -184,7 +190,7 @@ public class UserModel
 }
 ```
 
-*AgeCheckAttribute.cs*
+AgeCheckAttribute.cs
 
 ```cs
 using System;

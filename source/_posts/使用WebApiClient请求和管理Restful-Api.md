@@ -12,7 +12,9 @@ WebApiClient的出现,大幅度减轻了接口调用者的工作量,而且在调
 <!--more-->
 
 以下为WebApiClient应用到项目中的一般流程
+
 ##### 声明http接口的Interface
+
 ```cs
 [JsonReturn]
 public interface IlotRemotePush : IDisposable
@@ -73,7 +75,9 @@ public class ApiResult<T> : IApiReult
 ```
 
 ##### 调用http接口
+
 WebApiClient不需要开发者实现接口,使用HttpApiClient.Create方法可以动态创建接口的实现类的实例,调用实例的方法,就完成一个Api的请求
+
 ```cs
 using (var iotApi = HttpApiClient.Create<IlotRemotePush>())
 {
@@ -94,7 +98,9 @@ using (var iotApi = HttpApiClient.Create<IlotRemotePush>())
 ```
 
 ##### 异常定义与异常处理
+
 在以上接口中,接口返回的都是ApiResult
+
 ```cs
 /// <summary>
 /// 表示lot异常
@@ -118,6 +124,7 @@ public class lotException : Exception
 ```
 
 还应该在Interface上扩展JsonResult,用于将ApiResult的ErrorCode转换为lotExcetion,并抛出
+
 ```cs
 /// <summary>
 /// 表示lotJson结果
@@ -137,6 +144,7 @@ public class lotJsonResultAttribute : JsonReturnAttribute
 ```
 
 然后将新的lotJsonResultAttribute在Interface上替换JsonReturnAttribute
+
 ```cs
 [lotJsonResult]public interface IlotRemotePush : IDisposable
 {
@@ -145,6 +153,7 @@ public class lotJsonResultAttribute : JsonReturnAttribute
 ```
 
 最后,调用http接口的时候,可以使用Handle()扩展方法处理异常
+
 ```cs
 using(var iotApi = HttpApiClient.Create<IlotRemotePush>())
 {

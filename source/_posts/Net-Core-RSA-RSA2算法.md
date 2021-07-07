@@ -6,9 +6,11 @@ tags:
  - .Net Core
  - RSA算法
 ---
-RSA2是在原来SHA1WithRSA签名算法的基础上,新增了支持SHA256WithRSA的签名算法.该算法比该SHA1WithRSA有更强的安全能力.
+RSA2是在原来SHA1WithRSA签名算法的基础上, 新增了支持SHA256WithRSA的签名算法. 该算法比该SHA1WithRSA有更强的安全能力.
 <!--more-->
+
 ###### RSA加解密 使用OpenSSL的公钥加密/私钥解密
+
 ```cs
 public class RSAHelper
 {
@@ -345,6 +347,7 @@ public class RSAHelper
 ```
 
 ###### 使用
+
 ```cs
 static void Main(string[] args)
 {    

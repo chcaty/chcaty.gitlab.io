@@ -11,8 +11,11 @@ tags:
 <!--more-->
 
 ##### Http请求
+
 设置了兼容性，不用继承接口，在一个类里可以完成url和参数的设置
+
 ###### HttpInterface.cs
+
 ```cs
     /// <summary>
     /// http://127.0.0.1:8880
@@ -41,8 +44,11 @@ tags:
 ```
 
 ##### WebService
+
 调用接口时注意，方法名= 类名
+
 ###### WSInterface.cs
+
 ```cs
     /// <summary>
     /// http://127.0.0.1:8881/wstest?wsdl
@@ -61,7 +67,9 @@ tags:
 ```
 
 ##### 使用
+
 ###### Program.cs
+
 ```cs
 class Program
     {
@@ -120,4 +128,3 @@ class Program
         }
     }
 ```
-

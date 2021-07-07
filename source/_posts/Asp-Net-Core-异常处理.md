@@ -13,7 +13,7 @@ tags:
 
 Exception Filter 只能够捕捉到Action和Action Filter 所发出的Exception.其他类型的Filter或Middleware产生的Exception,无法通过Exception Filter 拦截.并不太适合用来做全站通用的Exception Handler.
 
-*ExceptionFilter.cs*
+ExceptionFilter.cs
 
 ```cs
 public class ExceptionFilter : IAsyncExceptionFilter
@@ -26,7 +26,7 @@ public class ExceptionFilter : IAsyncExceptionFilter
 }
 ```
 
-*Starpup.cs*
+Starpup.cs
 
 ```cs
 public class Startup
@@ -47,7 +47,7 @@ public class Startup
 
 Middleware 注册的层级可以在Filter的外层,也就是全部的Filter都会经过Middleware.那么只需要在Exception Middleware注册在所有Middleware的最外层,就可以捕捉到全站的异常.
 
-*ExceptionMiddleware.cs*
+ExceptionMiddleware.cs
 
 ```cs
 public class ExceptionMiddleware
@@ -73,7 +73,7 @@ public class ExceptionMiddleware
 }
 ```
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -91,7 +91,7 @@ public class Startup
 
 Asp.Net Core有提供Exception Handler 的管道,可以直接调用UseExceptionHandler指定错误页面.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -107,7 +107,7 @@ ExceptionHandlerOptions
 
 UseExceptionHandler 除了可以指派错误页面外,也可以自己实现错误发生触发的事件.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -139,7 +139,7 @@ public class Startup
 
 UseDeveloperExceptionPage 是Asp.Net Core提供的错误信息页面服务.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup

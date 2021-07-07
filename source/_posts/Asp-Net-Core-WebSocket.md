@@ -6,11 +6,15 @@ tags:
  - .Net Core
  - WebSocket
 ---
+
 ##### WebSocket是什么
-WebSocket 是一种在单个TCP连接上进行全双工通讯的协议,是建立在TCP上,且独立的协议.在WebSocket API中,浏览器和服务器只需要完成一次握手,两者之间就可以进行持久性的连接,并进行双向数据传输.
-为了建立WebSocket连接,浏览器通过Http1.1协议的101StatusCode进行握手
+
+WebSocket 是一种在单个TCP连接上进行全双工通讯的协议, 是建立在TCP上, 且独立的协议. 在WebSocket API中, 浏览器和服务器只需要完成一次握手, 两者之间就可以进行持久性的连接, 并进行双向数据传输.
+为了建立WebSocket连接, 浏览器通过Http1.1协议的101StatusCode进行握手
 <!--more-->
+
 ##### 在Asp.Net Core中使用WebSocket
+
 ```cs
 // Configure function
 /// Summary

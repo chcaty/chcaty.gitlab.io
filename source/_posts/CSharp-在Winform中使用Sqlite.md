@@ -6,9 +6,11 @@ tags:
  - Sqlite
  - C#
 ---
-近期了解了一下Sqlite数据库,便想把之前写的一个爬虫项目的数据库里添加Sqlite支持,一开始想着用EF去完成的,后面尝试过后,发现EF用起来并不是那么方便,就改成用Sqlite的ORM框架,这里采用的是sqlite-net-pcl,nuget查找sqlite-net-pcl并选择即可.
+近期了解了一下Sqlite数据库, 便想把之前写的一个爬虫项目的数据库里添加Sqlite支持, 一开始想着用EF去完成的, 后面尝试过后, 发现EF用起来并不是那么方便, 就改成用Sqlite的ORM框架, 这里采用的是sqlite-net-pcl, nuget查找sqlite-net-pcl并选择即可.
 <!--more-->
+
 ##### 定义实体类
+
 ```cs
 public class Book
 {
@@ -19,7 +21,9 @@ public class Book
     public string DownloadLink { get; set; }
 }
 ```
+
 ##### 定义数据库连接
+
 ```cs
 public class BookSqliteDb : SQLiteConnection
 {
@@ -33,7 +37,9 @@ public class BookSqliteDb : SQLiteConnection
     }
 }
 ```
+
 ##### 调用
+
 ```cs
 //定义Sqlite文件路径
 private string dbPath = $"{Environment.CurrentDirectory}\\Kindle.db";

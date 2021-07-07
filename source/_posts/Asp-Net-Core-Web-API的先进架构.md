@@ -7,15 +7,20 @@ tags:
  - Web API
 ---
 ##### 架构分层
+
 端口和适配器模式(又称六角形架构)可以解决业务逻辑与其他依赖项(如数据访问或API框架)耦合过于紧密的问题。使用此模式将允许您的API解决方案具有清晰的边界、具有单一职责的良好命名的对象，最终使其更容易开发和维护。架构分为API层,Domain层和Data层
 <!--more-->
 ##### Domain层
+
 领域层具有以下功能:
+
 * 定义将在整个解决方案中使用的实体对象。这些模型将表示数据层的数据模型（DataModel）
 * 定义视图模型（ViewModel），将由API层针对HTTP请求和响应作为单个对象或对象集来使用
 * 定义接口，我们的数据层可以通过这些接口实现数据访问逻辑
 * 实现将包含从API层调用的方法的Supervisor。每个方法都代表一个API调用，并将数据从注入的数据层转换为视图模型以返回
+
 示例如下
+
 ```cs
 // Album.cs
 public sealed class Album
@@ -61,7 +66,9 @@ public async Task<AlbumViewModel> GetAlbumByIdAsync(int id, CancellationToken ct
 ```
 
 ##### Data层
+
 数据层的关键是使用领域层中开发的接口实现每个实体存储库。以领域层的专辑存储库为例，它就是实现了IAlbumRepository接口。每个存储库都将注入DBContext，允许使用实体框架核心访问SQL数据库
+
 ```cs
 public class AlbumRepository : IAlbumRepository
 {
@@ -113,7 +120,7 @@ return await GetByIdAsync(id, ct) != null;
     public async Task<bool> DeleteAsync(int id, CancellationToken ct = default(CancellationToken))
     {
         if (!await AlbumExists(id, ct))
- 	     return false;
+            return false;
         var toRemove = _context.Album.Find(id);
         _context.Album.Remove(toRemove);
         await _context.SaveChangesAsync(ct);
@@ -128,7 +135,9 @@ return await GetByIdAsync(id, ct) != null;
 ```
 
 ##### API层
+
 这一层包含Web API端点逻辑的代码，包括控制器。这个解决方案的API项目将有一个单独的职责，那就是处理web服务器接收到的HTTP请求并返回HTTP响应，无论成功还是失败。在这个项目中，将会有非常少的业务逻辑。我们将处理在领域或数据项目中发生的异常和错误，以有效地与API的使用者进行通信。此通信将使用HTTP响应代码和在HTTP响应报文中返回的任何数据。
+
 ```cs
 [Route("api/[controller]")]
 public class AlbumController : Controller

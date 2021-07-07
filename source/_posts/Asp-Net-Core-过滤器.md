@@ -7,9 +7,11 @@ tags:
  - Filter
 ---
 #### Filter 简介
+
 Filter的作用是在Action执行前或执行后做一些加工处理.跟中间件类似,但执行的顺序略有不同.把Filter用好了,可以减少代码量和提高执行效率.
 <!--more-->
 ##### Filter 分类
+
 * Authorization Filter
 
   优先级最高,常用于验证请求是否合法,不合格则跳过后续处理
@@ -38,7 +40,8 @@ Filter的作用是在Action执行前或执行后做一些加工处理.跟中间�
 
 #### 创建Filter
 
-*Authorization Filter.cs*
+Authorization Filter.cs
+
 ```cs
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -60,7 +63,9 @@ namespace Caty.Web.Filters
     }
 }
 ```
-*Resource Filter.cs*
+
+Resource Filter.cs
+
 ```cs
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
@@ -89,7 +94,9 @@ namespace Caty.Web.Filters
     }
 }
 ```
-Action Filter, Result Filter,Exception Filter 与 Resource Filter 类似,只是分别继承了不同的接口,
+
+Action Filter, Result Filter,Exception Filter 与 Resource Filter 类似,只是分别继承了不同的接口
+
 * Action Filter 同步继承 IActionFilter,异步继承IAsyncActionFilter;
 * Result Filter 同步继承IResultFilter,异步继承IAsyncResultFilter;
 * Exception Filter 同步继承IExceptionFilter ,异步继承IAsyncExceptionFilter.

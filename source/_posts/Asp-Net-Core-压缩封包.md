@@ -15,7 +15,7 @@ Asp.Net Core 不会自动把所有封包进行压缩,要对Response的内容进�
 
 在Startup.ConfigureServices 加入封包压缩的服务以及Startup.Configure 注册封包压缩的中间件.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -41,7 +41,7 @@ public class Startup
 
 可以通过ResponseCompressionOptions调整要被压缩的MimeTypes以及压缩的方法等.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -85,7 +85,7 @@ public class Startup
 
 可以继承ICompressionProvider,实例化自定义的压缩方法.并通过HttpHeader的Accept-Encoding指定压缩方式.再将自定义的压缩方法加入到ResponseCompressionOptions.Providers.
 
-*CustomCompressionProvider.cs*
+CustomCompressionProvider.cs
 
 ```cs
 public class CustomCompressionProvider:ICompressionProvider
@@ -100,7 +100,7 @@ public class CustomCompressionProvider:ICompressionProvider
 }
 ```
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup

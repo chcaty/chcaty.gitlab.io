@@ -6,12 +6,16 @@ tags:
  - .Net Core
  - 设计模式
 ---
+
 ##### 简单工厂的定义
-简单工厂负责创建对象的细节工作,通过传入的类型参数,建立并返回不同类型的对象.
+
+简单工厂负责创建对象的细节工作, 通过传入的类型参数, 建立并返回不同类型的对象.
 <!--more-->
 
 ##### .Net Core实现简单工厂
-###### Pizza.cs
+
+Pizza.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -52,7 +56,8 @@ namespace SimpleFactory.Pizzas
 }
 ```
 
-###### CheesePizza.cs
+CheesePizza.cs
+
 ```cs
 namespace SimpleFactory.Pizzas
 {
@@ -69,7 +74,8 @@ namespace SimpleFactory.Pizzas
 } 
 ```
 
-###### ClamPizza.ca
+ClamPizza.ca
+
 ```cs
 namespace SimpleFactory.Pizzas
 {
@@ -86,7 +92,8 @@ namespace SimpleFactory.Pizzas
 } 
 ```
 
-###### SimplePizzaFactory
+SimplePizzaFactory
+
 ```cs
 using SimpleFactory.Pizzas;
 
@@ -112,7 +119,8 @@ namespace SimpleFactory
 }
 ```
 
-###### PizzaStore.cs
+PizzaStore.cs
+
 ```cs
 using SimpleFactory.Pizzas;
 
@@ -140,7 +148,8 @@ namespace SimpleFactory
 }
 ```
 
-###### Program.cs
+Program.cs
+
 ```cs
 using System;
 namespace SimpleFactory
@@ -159,10 +168,13 @@ namespace SimpleFactory
 ```
 
 ##### 工厂方法的定义
-工厂方法把对象创建的动作交给了子类,并让它决定创建哪些对象.
+
+工厂方法把对象创建的动作交给了子类, 并让它决定创建哪些对象.
 
 ##### .Net Core实现工厂方法
-###### ChicagoCheesePizza.cs
+
+ChicagoCheesePizza.cs
+
 ```cs
 namespace FactoryMethodPattern.Pizzas
 {
@@ -179,7 +191,8 @@ namespace FactoryMethodPattern.Pizzas
 } 
 ```
 
-###### ChicagoClamPizza.ca
+ChicagoClamPizza.cs
+
 ```cs
 namespace FactoryMethodPattern.Pizzas
 {
@@ -196,7 +209,8 @@ namespace FactoryMethodPattern.Pizzas
 } 
 ```
 
-###### PizzaStore.cs
+PizzaStore.cs
+
 ```cs
 using FactoryMethodPattern.Pizzas;
 
@@ -219,7 +233,8 @@ namespace FactoryMethodPattern
 }
 ```
 
-###### ChicagoPizzaStore.cs
+ChicagoPizzaStore.cs
+
 ```cs
 using FactoryMethodPattern.Pizzas;
 
@@ -245,7 +260,8 @@ namespace FactoryMethodPattern
 }
 ```
 
-###### Program.cs
+Program.cs
+
 ```cs
 using System;
 namespace FactoryMethodPattern

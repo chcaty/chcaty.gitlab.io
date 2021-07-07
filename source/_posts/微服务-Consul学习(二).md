@@ -9,9 +9,13 @@ tags:
 上一次学习到了在命令行如何去启动和注册服务.今天学习如何通过Consul Api 接口注册服务.
 <!--more-->
 #### 创建一个.Net Core WebApi项目
+
 模板选择Api.
+
 #### 创建HealthController,用于Consul的健康检查
+
 HealthController.cs
+
 ``` cs
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,8 +30,11 @@ namespace ConsulApiTest.Controllers
     }
 }
 ```
+
 #### 创建ConsulBuilderExtensions,用于注册服务
+
 ConsulBuilderExtensions.cs
+
 ```cs
 using Consul;
 using Microsoft.AspNetCore.Builder;
@@ -69,40 +76,49 @@ namespace ConsulApiTest
     }
 }
 ```
-##### 注意:
+
+##### 注意
+
 1. 需引入Consul包
 2. ServiceEntity类,定义如下
-ServiceEntity.cs
-```cs
-namespace ConsulApiTest
-{
-    public class ServiceEntity
+
+    ServiceEntity.cs
+
+    ```cs
+    namespace ConsulApiTest
     {
-        public string IP { get; set; }
-        public int Port { get; set; }
-        public string ServiceName { get; set; }
-        public string ConsulIP { get; set; }
-        public int ConsulPort { get; set; }
+        public class ServiceEntity
+        {
+            public string IP { get; set; }
+            public int Port { get; set; }
+            public string ServiceName { get; set; }
+            public string ConsulIP { get; set; }
+            public int ConsulPort { get; set; }
+        }
     }
-}
-```
+    ```
+
 3. appSettings.json配置文件 定义如下
-appSettings.json
-```cs
-{
-  "Service": {
-    "Name": "DMSWebAPITest",
-    "IP": "localhost",
-    "Port": "44330"//这里需换成项目运行所使用的端口
-  },
-  "Consul": {
-    "IP": "localhost",
-    "Port": "8500"
-  }
-}
-```
+    appSettings.json
+
+    ```cs
+    {
+    "Service": {
+        "Name": "DMSWebAPITest",
+        "IP": "localhost",
+        "Port": "44330"//这里需换成项目运行所使用的端口
+    },
+    "Consul": {
+        "IP": "localhost",
+        "Port": "8500"
+    }
+    }
+    ```
+
 #### 在Startup.cs中,调用ConsulBuilderExtensions拓展方法
+
 Startup.cs
+
 ```cs
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -156,6 +172,8 @@ namespace ConsulApiTest
 }
 
 ```
+
 #### 小结
+
 * 在学习过程还是遇到一些问题,不过最终还是处理好了,有时候可能需要细心一点
 * 以上实现了通过配置文件注册，API接口注册到Consul实例，后续加入Ocelot构建API网关，到时会结合Consul进行进一步的集成，另外，还会尝试Polly进行熔断降级。

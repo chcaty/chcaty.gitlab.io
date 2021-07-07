@@ -8,7 +8,9 @@ tags:
 ---
 “爬虫”就是一段用来自动化采集网站数据的程序。
 <!--more-->
+
 #### ICrawler.cs
+
 ```cs
 using Caty.Spider.Crawler.Events;
 using System;
@@ -33,6 +35,7 @@ namespace Caty.Spider.Crawler
 ```
 
 #### SimpleCrawler.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -144,6 +147,7 @@ namespace Caty.Spider.Crawler
 ```
 
 #### OnCompletedEventArgs.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -172,6 +176,7 @@ namespace Caty.Spider.Crawler.Events
 ```
 
 #### OnErrorEventArgs.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -198,6 +203,7 @@ namespace Caty.Spider.Crawler.Events
 ```
 
 #### OnStartEventArgs.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -221,6 +227,7 @@ namespace Caty.Spider.Crawler.Events
 ```
 
 #### 如何使用
+
 ```cs
 var Url = "http://mebook.cc/";
 var kindleCrawler = new SimpleCrawler();

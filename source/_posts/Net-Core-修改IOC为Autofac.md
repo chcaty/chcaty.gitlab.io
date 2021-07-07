@@ -10,10 +10,13 @@ tags:
 <!--more-->
 
 ##### 安装Autofac
-在Nuget上，找到Autofac和Autofac.Extensions.DependencyInjection，直接安装。
+
+在Nuget上，找到Autofac和Autofac. Extensions. DependencyInjection，直接安装。
 
 ##### 创建容器并注册依赖
+
 修改Startup.cs中的代码，主要ConfigureServices(IServiceCollection services)方法。其中该方法默认的返回值为void，这里需要修改返回值为IServiceProvider。代码如下：
+
 ```cs
 public IContainer ApplicationContainer { get; private set; }
 // ConfigureServices is where you register dependencies. This gets

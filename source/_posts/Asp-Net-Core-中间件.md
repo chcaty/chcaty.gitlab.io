@@ -12,7 +12,7 @@ tags:
 <!--more-->
 #### 建立中间件
 
-*FirstMiddleware.cs*
+FirstMiddleware.cs
 
 ```cs
 public class TestMiddleware
@@ -39,7 +39,7 @@ public class TestMiddleware
 
 在Startup.Configue中注册,则全部的Request都会通过该中间件.
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup
@@ -55,7 +55,7 @@ public class Startup
 
 中间件也可以仅在特定的控制器和请求上注册.
 
-*ValueController.cs*
+ValueController.cs
 
 ```cs
 [MiddlewareFilter(typeof(TestMiddleware))]
@@ -73,7 +73,7 @@ public class ValueController : Controller
 
 大部分的中间件都会用一个静态方法来进行注册.
 
-*CustomMiddlewareExtensions.cs*
+CustomMiddlewareExtensions.cs
 
 ```cs
 public static class CustomMiddlewareExtensions
@@ -85,7 +85,7 @@ public static class CustomMiddlewareExtensions
 }
 ```
 
-*Startup.cs*
+Startup.cs
 
 ```cs
 public class Startup

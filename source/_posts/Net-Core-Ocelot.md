@@ -6,17 +6,22 @@ tags:
  - .Net Core
  - Ocelot
 ---
-Ocelot是一个用.Net Core实现并且开源的API网关,它功能强大,包括了：路由、请求聚合、服务发现、认证、鉴权、限流熔断，并内置了负载均衡器与Service Fabric、Butterfly Tracing集成。
+Ocelot是一个用.Net Core实现并且开源的API网关, 它功能强大, 包括了：路由、请求聚合、服务发现、认证、鉴权、限流熔断，并内置了负载均衡器与Service Fabric、Butterfly Tracing集成。
 <!--more-->
+
 ##### 安装Ocelot
+
 通过nuget安装Ocelot
+
 ```cs
 Install-Package Ocelot
 ```
 
 ##### 配置
+
 Ocelot.json
 最基本的配置信息
+
 ```cs
 {
     "ReRoutes":[],
@@ -27,6 +32,7 @@ Ocelot.json
 ```
 
 将配置文件加入Asp.Net Core Configuration
+
 ```cs
 public static IWebHost BuildWebHost(string[] args) => WebHost.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext,builder) => {
     builder.SetBasePath(hostingContext.HostingEnvironment.ContentRootPath).AddJsonFile("Ocelot.json");
@@ -34,6 +40,7 @@ public static IWebHost BuildWebHost(string[] args) => WebHost.CreateDefaultBuild
 ```
 
 配置依赖注入和中间件
+
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {

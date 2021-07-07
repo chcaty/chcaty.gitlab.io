@@ -6,11 +6,14 @@ tags:
  - 邮件
  - C#
 ---
+
 #### 起源
-最近负责的一个项目,客户提了一个需求,自动导出输出,按格式生成xls,并将xls文件当成附件发送邮件,就此,研究了一下C#怎么发送邮件.
+
+最近负责的一个项目, 客户提了一个需求, 自动导出输出, 按格式生成xls, 并将xls文件当成附件发送邮件, 就此, 研究了一下C#怎么发送邮件.
 <!--more-->
 
 #### MailHelper.cs
+
 ```cs
 using System;
 using System.Collections.Generic;
@@ -202,6 +205,7 @@ namespace FrmSendMail
 ```
 
 #### 调用
+
 ```cs
 using System;
 using System.Net.Mail;

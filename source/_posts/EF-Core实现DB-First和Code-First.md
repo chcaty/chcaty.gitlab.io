@@ -6,7 +6,9 @@ tags:
  - .Net Core
  - EF Core
 ---
+
 ##### 安装 Entity Framework Core
+
 ```cs
 // MsSql
 Install-Package Microsoft.EntityFrameworkCore.SqlServer
@@ -24,8 +26,11 @@ Install-Package Microsoft.EntityFrameworkCore.SqlServer.Design
 // MySql
 Install-Package Pomelo.EntityFrameworkCore.MySql.Design
 ```
+
 <!--more-->
+
 ##### DB First -- 从现有数据库创建模型
+
 ```cs
 // MsSql
 Scaffold-DbContext -Connection "Server=localhost;User Id=root;Password=123456;Database=vanfj" -Provider "Microsoft.EntityFrameworkCore.SqlServer" -OutputDir "Models"
@@ -33,9 +38,13 @@ Scaffold-DbContext -Connection "Server=localhost;User Id=root;Password=123456;Da
 Scaffold-DbContext -Connection "Server=localhost;User Id=root;Password=123456;Database=vanfj" -Provider "Pomelo.EntityFrameworkCore.MySql" -OutputDir "Models"
 // 将Connection中的连接字符串替换为自己的数据库连接，将OutputDir中的Models替换为自己要生成的文件目录名
 ```
+
 ##### CodeFirst -- 从模型生成到数据库
+
 ###### 创建上下文
+
 IRSContext.cs
+
 ```cs
 public class IRSContext:DbContext
 {
@@ -51,7 +60,9 @@ public class IRSContext:DbContext
     }
 }
 ```
+
 User.cs
+
 ```cs
 public class User
 {
@@ -61,7 +72,9 @@ public class User
     public string UserName { get; set; }
 }
 ```
+
 Role.cs
+
 ```cs
 public class Role
 {
@@ -70,8 +83,11 @@ public class Role
     public string RoleDecs { get; set; }
 }
 ```
+
 ####### 注入上下文
+
 Startup.cs
+
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
@@ -86,7 +102,9 @@ public void ConfigureServices(IServiceCollection services)
     services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 }
 ```
+
 ###### appsettings.json连接字符串
+
 ```cs
 {
     "ConnectionStrings": 
@@ -95,7 +113,9 @@ public void ConfigureServices(IServiceCollection services)
     },
 }
 ```
-##### 执行NuGet命令,创建数据库
+
+##### 执行NuGet命令, 创建数据库
+
 ```cs
 // 第一次执行初始化
 Add-Migration InitialCreate
@@ -112,20 +132,20 @@ Drop-Database -WhatIf
 Get-DbContext 
 // 从数据库更新DbContext和实体的类型
 Scaffold-DbContext 
--Connection <String>	// 数据库的连接字符串。
--Provider <String>	// 要使用的提供程序。 （例如 Microsoft.EntityFrameworkCore.SqlServer)
--OutputDir <String >	// 要将文件放入的目录。 路径是相对于项目目录。
---Context <String >	// 若要生成的 dbcontext 名称。
--Schemas <String[]>	// 要生成实体类型的表架构。
--Tables <String[]>	// 要生成实体类型的表。
--DataAnnotations	// 使用属性来配置该模型 （如果可能）。 如果省略，则使用仅 fluent API。
--UseDatabaseNames	// 使用直接从数据库表和列名称。
+-Connection <String> // 数据库的连接字符串。
+-Provider <String> // 要使用的提供程序。 （例如 Microsoft.EntityFrameworkCore.SqlServer)
+-OutputDir <String > // 要将文件放入的目录。 路径是相对于项目目录。
+--Context <String > // 若要生成的 dbcontext 名称。
+-Schemas <String[]> // 要生成实体类型的表架构。
+-Tables <String[]> // 要生成实体类型的表。
+-DataAnnotations // 使用属性来配置该模型 （如果可能）。 如果省略，则使用仅 fluent API。
+-UseDatabaseNames // 使用直接从数据库表和列名称。
 -Force // 覆盖现有文件。
 
 // 从迁移中生成的 SQL 脚本
 Script-Migration
--From <String>	// 开始迁移。 默认值为 0 （初始数据库）
--To <String>	// 结束的迁移。 默认到最后一个迁移
--Idempotent	// 生成可以在任何迁移的数据库使用的脚本
--Output <String>	// 要将结果写入的文件
+-From <String> // 开始迁移。 默认值为 0 （初始数据库）
+-To <String> // 结束的迁移。 默认到最后一个迁移
+-Idempotent // 生成可以在任何迁移的数据库使用的脚本
+-Output <String> // 要将结果写入的文件
 ```

@@ -6,12 +6,16 @@ tags:
  - .Net Core
  - 设计模式
 ---
+
 ##### 装饰模式的定义
-动态的对某个对象进行扩展(附加额外的职责),装饰器是除了继承之外的另外一种为对象扩展功能的方法
+
+动态的对某个对象进行扩展(附加额外的职责), 装饰器是除了继承之外的另外一种为对象扩展功能的方法
 <!--more-->
 
 ##### .Net Core实现装饰模式的代码
+
 ###### Beverage.cs
+
 ```cs
 namespace DecoratorPattern.Core
 {
@@ -24,6 +28,7 @@ namespace DecoratorPattern.Core
 ```
 
 ###### CondimentDecorator.cs
+
 ```cs
 namespace DecoratorPattern.Core
 {
@@ -35,6 +40,7 @@ namespace DecoratorPattern.Core
 ```
 
 ###### Espresso.cs
+
 ```cs
 using DecoratorPattern.Core;
 namespace DecoratorPattern.Coffee
@@ -54,6 +60,7 @@ namespace DecoratorPattern.Coffee
 ```
 
 ###### HouseBlend.cs
+
 ```cs
 using DecoratorPattern.Core;
 namespace DecoratorPattern.Coffee
@@ -73,6 +80,7 @@ namespace DecoratorPattern.Coffee
 ```
 
 ###### Mocha.cs
+
 ```cs
 using DecoratorPattern.Core;
 namespace DecoratorPattern.Condiments
@@ -94,6 +102,7 @@ namespace DecoratorPattern.Condiments
 ```
 
 ###### Program.cs
+
 ```cs
 using System;
 using DecoratorPattern.Core;

@@ -6,7 +6,7 @@ tags:
  - .Net
  - WPF
 ---
-> 作者：Peter Luo 出处：https://www.cnblogs.com/Peter-Luo/
+> 作者：Peter Luo 出处：`https://www.cnblogs.com/Peter-Luo/`
 
 ### XAML基础
 
@@ -18,9 +18,9 @@ tags:
 
 #### 名称空间
 
-* http://schemas.microsoft.com/winfx/2006/xaml/presentation 是WPF核心名称空间.它包含了所有WPF类,包括用来构建用户界面的控件.如果没有使用名称空间前缀,那么它成为整个文档的默认名称空间.换句话说,除非另外指明,每个元素自动位于这个名称空间.
+* `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 是WPF核心名称空间.它包含了所有WPF类,包括用来构建用户界面的控件.如果没有使用名称空间前缀,那么它成为整个文档的默认名称空间.换句话说,除非另外指明,每个元素自动位于这个名称空间.
 
-* http://schemas.microsoft.com/winfx/2006/xaml 是XAML名称空间.它包含各种XAML使用特性,这些特性可影响文档的解释方式.该名称空间被映射为前缀x.这意味着可通过在元素名称之前放置名称空间前缀x来使用该名称空间(例如<x:ElementName>).
+* `http://schemas.microsoft.com/winfx/2006/xaml` 是XAML名称空间.它包含各种XAML使用特性,这些特性可影响文档的解释方式.该名称空间被映射为前缀x.这意味着可通过在元素名称之前放置名称空间前缀x来使用该名称空间(例如<x:ElementName>).
 <!--more-->
 #### 代码隐藏类
 

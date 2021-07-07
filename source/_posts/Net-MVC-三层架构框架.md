@@ -9,11 +9,14 @@ tags:
 asp.net+ef mvc三层框架搭建过程如下
 
 ##### 先创建Model层
+
 略
 <!--more-->
 
 ##### 创建数据访问接口层IUserInfoDal
+
 在该接口中定义了常见的方法CRUD以及分页方法
+
 ```cs
 public interface IUserInfoDal
 {
@@ -25,7 +28,8 @@ public interface IUserInfoDal
 }
 ```
 
-##### 每个接口中都需要CURD以及分页方法的定义,而且这些方法的定义基本上是一致的,所以封装.封装到IBaseDal
+##### 每个接口中都需要CURD以及分页方法的定义, 而且这些方法的定义基本上是一致的, 所以封装. 封装到IBaseDal
+
 ```cs
 public interface IBaseDal<T>where T:class,new()//注意该泛型的使用
 {
@@ -38,6 +42,7 @@ public interface IBaseDal<T>where T:class,new()//注意该泛型的使用
 ```
 
 ##### 让IUserInfoDal继承IBaseDal
+
 ```cs
 public interface IUserInfoDal:IBaseDal<UserInfo>
 {
@@ -46,6 +51,7 @@ public interface IUserInfoDal:IBaseDal<UserInfo>
 ```
 
 ##### 让具体的数据操作类UserInfoDal去实现IUserInfoDal接口中的方法
+
 ```cs
 public class UserInfoDal :IUserInfoDal
 {
@@ -122,6 +128,7 @@ public class UserInfoDal :IUserInfoDal
 ```  
 
 ##### 由于每个数据操作类都要实现自己的接口（每一个接口都继承了IBaseDal）,所以每个数据操作类中都要重复实现CURD以及分页的方法，所以把具体的实现封装到了BaseDal中。
+
 ```cs
 public class BaseDal<T>where T:class,new()
 {
@@ -199,6 +206,7 @@ public class BaseDal<T>where T:class,new()
 ```
 
 ##### 让UserInfoDal继承BaseDal.
+
 ```cs
 public class UserInfoDal : BaseDal<UserInfo>,IUserInfoDal
 {
@@ -206,7 +214,8 @@ public class UserInfoDal : BaseDal<UserInfo>,IUserInfoDal
 } 
 ```
 
-##### 创建DBSession(数据会话层：就是一个工厂类，负责完成所有数据操作类实例的创建，然后业务层通过数据会话层来获取要操作数据类的实例.所以数据会话层将业务层与数据层解耦. 在数据会话层中提供一个方法：完成所有数据的保存.)
+##### 创建DBSession(数据会话层：就是一个工厂类，负责完成所有数据操作类实例的创建，然后业务层通过数据会话层来获取要操作数据类的实例. 所以数据会话层将业务层与数据层解耦. 在数据会话层中提供一个方法：完成所有数据的保存.)
+
 ```cs
 private IUserInfoDal _UserInfoDal;
 public IUserInfoDal UserInfoDal
@@ -227,6 +236,7 @@ public IUserInfoDal UserInfoDal
 ```
 
 ##### 在数据会话层中提供一个方法：完成所有数据的保存
+
 ```cs
 /// <summary>
 /// 一个业务中经常涉及到对多张操作，我们希望连接一次数据库，完成对张表数据的操作。提高性能。 工作单元模式。
@@ -239,9 +249,11 @@ public bool SaveChanges()
 ```
 
 ##### 将数据层中的所有的保存数据的SaveChanges注释掉
+
 略
 
 ##### 在数据层中用到了EF的实例，数据会话层中也用到了，所以在一个请求中只能创建一个EF实例（线程内唯一对象）
+
 ```cs
 /// <summary>
 /// 负责创建EF数据操作上下文实例，必须保证线程内唯一.
@@ -262,6 +274,7 @@ public class DBContextFactory
 ```
 
 ##### 在DBSession和BaseDal中调用上面的方法（CreateDbContext）完成EF实例的创建
+
 ```cs
 // DBSession获取EF实例
 public DbContext Db
@@ -277,6 +290,7 @@ DbContext Db = DAL.DBContextFactory.CreateDbContext();
 ```
 
 ##### 抽象工厂封装数据操作类实例创建，然后DBSession调用抽象工厂
+
 ```cs
 /// <summary>
 /// 通过反射的形式创建类的实例
@@ -299,6 +313,7 @@ public class AbstractFactory
 ```	
 
 ##### 然后修改DBSession
+
 ```cs
 private IUserInfoDal _UserInfoDal;
 public IUserInfoDal UserInfoDal
@@ -320,6 +335,7 @@ public IUserInfoDal UserInfoDal
 ```
 
 ##### 定义DBSession的接口
+
 ```cs
 /// <summary>
 /// 业务层调用的是数据会话层的接口。
@@ -333,9 +349,11 @@ public interface IDBSession
 ```
 
 ##### 然后让DBSession实现该接口
+
 略
 
 ##### 定义具体的业务基类
+
 ```cs
 //在业务基类中完成DBSession的调用，然后将业务层中公共的方法定义在基类中，但是这些方法不知道通过DBSession来获取哪个数据操作类的实例。所以将该业务基类定义成抽象类，加上一个抽象方法，加上一个IBaseDal属性，并且让基类的构造方法调用抽象方法目的是在表现层new具体的业务子类，父类的构造方法被调用，这些执行抽象方法，但是执行的的是子类中具体的实现。业务子类知道通过DBSession获取哪个数据操作类的实例。
 public abstract class BaseService<T> where T:class,new()
@@ -361,7 +379,9 @@ public abstract class BaseService<T> where T:class,new()
 ```
 
 ##### 定义业务层的接口
+
 略
 
 ##### 将数据库链接字符串拷贝到web.config文件中
+
 略
