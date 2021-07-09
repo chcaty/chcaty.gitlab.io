@@ -165,9 +165,9 @@ pageFooter: true
 
 # ICP备案信息尾部显示
 icp:
-  enable: false
+  enable: ture
   url: "http://www.beian.miit.gov.cn/" # 备案链接
-  text: "浙ICP备88888888" # 备案信息
+  text: "粤ICP备20002392号" # 备案信息
 # 公安备案信息尾部显示
 gongan:
   enable: false
