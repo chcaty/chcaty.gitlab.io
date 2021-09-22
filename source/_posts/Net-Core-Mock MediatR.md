@@ -1,10 +1,10 @@
 ---
 title:  .Net Core Mock MediatR
 date: 2021-09-22 23:33:57
-categories: C# 
+categories: .Net Core 
 tags: 
  - MediatR
- - C#
+ - .Net Core
 ---
 ### 前言
 
@@ -100,7 +100,7 @@ internal class GetStudentByIdQueryHandler : IRequestHandler<GetStudentByIdQuery,
 
 #### 多播消息传输
 
-多播消息传输，也就是一对多的消息传递，一个消息对应多个消息处理。相关的接口主要为INotification（抽象多播消息）和INotificationHandler（消息处理）。多播消息传递是无返回值
+多播消息传输，也就是一对多的消息传递，一个消息对应多个消息处理。相关的接口主要为INotification（抽象多播消息）和INotificationHandler（消息处理）。多播消息传递是无返回值。
 
 定义一个推送学生信息变更的多播消息，代码如下
 
