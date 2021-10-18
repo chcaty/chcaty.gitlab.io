@@ -1,5 +1,5 @@
 ---
-title: 左耳听风-故障处理的最佳实践
+title: 左耳听风-Go语言编程模式：切片、接口、时间和性能
 date: 2021-10-13 23:43:58
 categories: 笔记
 tags: 
@@ -64,7 +64,7 @@ a[2] = 42
 
 我们再来看一个例子：
 
-```cs
+```go
 func main() {
     path := []byte("AAAA/BBBBBBBBB")
     sepIndex := bytes.IndexByte(path,'/')
