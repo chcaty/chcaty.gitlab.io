@@ -1,6 +1,6 @@
 ---
-title: 左耳听风-Go语言编程模式：切片、接口、时间和性能
-date: 2021-10-13 23:43:58
+title: 左耳听风-Go语言编程模式：Go Generation
+date: 2021-10-18 23:43:58
 categories: 笔记
 tags: 
  - 笔记
@@ -10,129 +10,166 @@ tags:
 
 ### 前言
 
-主要包括数组切片的一些小坑、接口编程，以及时间和程序运行性能相关的内容。
+Go 语言的代码生成主要还是用来解决编程泛型的问题。泛型编程主要是解决这样一个问题：因为静态类型语言有类型，所以，相关的算法或是对数据处理的程序会因为类型不同而需要复制一份，这样会导致数据类型和算法功能耦合。
+
+我之所以说泛型编程可以解决这样的问题，就是说，在写代码的时候，不用关心处理数据的类型，只需要关心相关的处理逻辑。
+
+泛型编程是静态语言中非常非常重要的特征，如果没有泛型，我们就很难做到多态，也很难完成抽象，这就会导致我们的代码冗余量很大。
 <!--more-->
 
-### Slice
+### 现实中的类比
 
-Slice，中文翻译叫“切片”，这个东西在 Go 语言中不是数组，而是一个结构体，其定义如下：
+我们用螺丝刀来做打比方，螺丝刀本来只有一个拧螺丝的作用，但是因为螺丝的类型太多，有平口的，有十字口的，有六角的……螺丝还有不同的尺寸，这就导致我们的螺丝刀为了要适配各种千奇百怪的螺丝类型（样式和尺寸），也是各种样式的。
+
+而真正的抽象是，螺丝刀不应该关心螺丝的类型，它只要关注自己的功能是不是完备，并且让自己可以适配不同类型的螺丝就行了，这就是所谓的泛型编程要解决的实际问题。
+
+### Go 语方的类型检查
+
+因为 Go 语言目前并不支持真正的泛型，所以，只能用 interface{} 这样的类似于 void*  的过度泛型来玩，这就导致我们要在实际过程中进行类型检查。
+
+Go 语言的类型检查有两种技术，一种是 Type Assert，一种是 Reflection。
+
+### Type Assert
+
+这种技术，一般是对某个变量进行 .(type)的转型操作，它会返回两个值，分别是 variable 和 error。  variable 是被转换好的类型，error 表示如果不能转换类型，则会报错。
+
+在下面的示例中，我们有一个通用类型的容器，可以进行 Put(val)和 Get()，注意，这里使用了 interface{}做泛型。
 
 ```go
-type slice struct {
-    array unsafe.Pointer //指向存放数据的数组指针
-    len   int            //长度有多大
-    cap   int            //容量有多大
+//Container is a generic container, accepting anything.
+type Container []interface{}
+
+//Put adds an element to the container.
+func (c *Container) Put(elem interface{}) {
+    *c = append(*c, elem)
+}
+//Get gets an element from the container.
+func (c *Container) Get() interface{} {
+    elem := (*c)[0]
+    *c = (*c)[1:]
+    return elem
 }
 ```
 
-结构体里用数组指针的问题——__数据会发生共享__!
-
-Slice的一些操作
+我们可以这样使用：
 
 ```go
-foo = make([]int, 5)
-foo[3] = 42
-foo[4] = 100
-
-bar := foo[1:4]
-bar[1] = 99
+intContainer := &Container{}
+intContainer.Put(7)
+intContainer.Put(42)
 ```
 
-解释下这段代码：
+但是，在把数据取出来时，因为类型是 interface{} ，所以，你还要做一个转型，只有转型成功，才能进行后续操作（因为 interface{}太泛了，泛到什么类型都可以放）。
 
-* 首先，创建一个 foo 的 Slice，其中的长度和容量都是 5；
-* 然后，开始对 foo 所指向的数组中的索引为 3 和 4 的元素进行赋值；
-* 最后，对 foo 做切片后赋值给 bar，再修改 bar[1]。
-
-![alt 图](https://static001.geekbang.org/resource/image/66/20/66ed288ef019a8445b639db92d79a420.jpg?wh=1803x1242)
-
-从这张图片中，我们可以看到，因为 foo 和 bar 的内存是共享的，所以，foo 和 bar 对数组内容的修改都会影响到对方。
-
-接下来，我们再来看一个数据操作 append() 的示例：
+下面是一个 Type Assert 的示例
 
 ```go
-a := make([]int, 32)
-b := a[1:16]
-a = append(a, 1)
-a[2] = 42
+// assert that the actual type is int
+elem, ok := intContainer.Get().(int)
+if !ok {
+    fmt.Println("Unable to read an int from intContainer")
+}
+
+fmt.Printf("assertExample: %d (%T)\n", elem, elem)
 ```
 
-这段代码中，把 a[1:16] 的切片赋给 b ，此时，a 和 b 的内存空间是共享的，然后，对 a 做了一个 append()的操作，这个操作会让 a 重新分配内存，这就会导致 a 和 b 不再共享，如下图所示：
+### Reflection
 
-![alt 图](https://static001.geekbang.org/resource/image/90/21/90e91f0e9517594b6c26fb64d531c621.jpg?wh=1743x1482)
-
-从图中，我们可以看到，append()操作让 a 的容量变成了 64，而长度是 33。这里你需要重点注意一下，append()这个函数在 cap 不够用的时候，就会重新分配内存以扩大容量，如果够用，就不会重新分配内存了！
-
-我们再来看一个例子：
+对于 Reflection，我们需要把上面的代码修改如下：
 
 ```go
-func main() {
-    path := []byte("AAAA/BBBBBBBBB")
-    sepIndex := bytes.IndexByte(path,'/')
-
-    dir1 := path[:sepIndex]
-    dir2 := path[sepIndex+1:]
-
-    fmt.Println("dir1 =>",string(dir1)) //prints: dir1 => AAAA
-    fmt.Println("dir2 =>",string(dir2)) //prints: dir2 => BBBBBBBBB
-
-    dir1 = append(dir1,"suffix"...)
-
-    fmt.Println("dir1 =>",string(dir1)) //prints: dir1 => AAAAsuffix
-    fmt.Println("dir2 =>",string(dir2)) //prints: dir2 => uffixBBBB
+type Container struct {
+    s reflect.Value
+}
+func NewContainer(t reflect.Type, size int) *Container {
+    if size <=0  { size=64 }
+    return &Container{
+        s: reflect.MakeSlice(reflect.SliceOf(t), 0, size), 
+    }
+}
+func (c *Container) Put(val interface{})  error {
+    if reflect.ValueOf(val).Type() != c.s.Type().Elem() {
+        return fmt.Errorf("Put: cannot put a %T into a slice of %s", 
+            val, c.s.Type().Elem()))
+    }
+    c.s = reflect.Append(c.s, reflect.ValueOf(val))
+    return nil
+}
+func (c *Container) Get(refval interface{}) error {
+    if reflect.ValueOf(refval).Kind() != reflect.Ptr ||
+        reflect.ValueOf(refval).Elem().Type() != c.s.Type().Elem() {
+        return fmt.Errorf("Get: needs *%s but got %T", c.s.Type().Elem(), refval)
+    }
+    reflect.ValueOf(refval).Elem().Set( c.s.Index(0) )
+    c.s = c.s.Slice(1, c.s.Len())
+    return nil
 }
 ```
 
-在这个例子中，dir1 和 dir2 共享内存，虽然 dir1 有一个 append() 操作，但是因为 cap 足够，于是数据扩展到了dir2 的空间。下面是相关的图示（注意上图中 dir1 和 dir2 结构体中的 cap 和 len 的变化）：
+这里的代码并不难懂，这是完全使用 Reflection 的玩法，我简单解释下。
 
-![alt 图](https://static001.geekbang.org/resource/image/33/01/33b6fb6a551a13cef4e0d9644a410601.jpg?wh=1983x2022)
+* 在 NewContainer()时，会根据参数的类型初始化一个 Slice。
+* 在 Put()时，会检查 val 是否和 Slice 的类型一致。
+* 在 Get()时，我们需要用一个入参的方式，因为我们没有办法返回 reflect.Value 或 interface{}，不然还要做 Type Assert。
+* 不过有类型检查，所以，必然会有检查不对的时候，因此，需要返回 error。
 
-如果要解决这个问题，我们只需要修改一行代码。我们要把代码
+于是，在使用这段代码的时候，会是下面这个样子
 
 ```go
-dir1 := path[:sepIndex]
+f1 := 3.1415926
+f2 := 1.41421356237
+
+c := NewMyContainer(reflect.TypeOf(f1), 16)
+
+if err := c.Put(f1); err != nil {
+  panic(err)
+}
+if err := c.Put(f2); err != nil {
+  panic(err)
+}
+
+g := 0.0
+
+if err := c.Get(&g); err != nil {
+  panic(err)
+}
+fmt.Printf("%v (%T)\n", g, g) //3.1415926 (float64)
+fmt.Println(c.s.Index(0)) //1.4142135623
 ```
 
-修改为：
+### 他山之石
 
-```go
-dir1 := path[:sepIndex:sepIndex]
-```
+对于泛型编程最牛的语言 C++ 来说，这类问题都是使用 Template 解决的。
 
-新的代码使用了 Full Slice Expression，最后一个参数叫“Limited Capacity”，于是，后续的 append() 操作会导致重新分配内存。
-
-### 深度比较
-
-我们复制一个对象时，这个对象可以是内建数据类型、数组、结构体、Map……在复制结构体的时候，如果我们需要比较两个结构体中的数据是否相同，就要使用深度比较，而不只是简单地做浅度比较。这里需要使用到反射 reflect.DeepEqual() ，下面是几个示例：
-
-```go
-import (
-    "fmt"
-    "reflect"
-)
-
-func main() {
-
-    v1 := data{}
-    v2 := data{}
-    fmt.Println("v1 == v2:",reflect.DeepEqual(v1,v2))
-    //prints: v1 == v2: true
-
-    m1 := map[string]string{"one": "a","two": "b"}
-    m2 := map[string]string{"two": "b", "one": "a"}
-    fmt.Println("m1 == m2:",reflect.DeepEqual(m1, m2))
-    //prints: m1 == m2: true
-
-    s1 := []int{1, 2, 3}
-    s2 := []int{1, 2, 3}
-    fmt.Println("s1 == s2:",reflect.DeepEqual(s1, s2))
-    //prints: s1 == s2: true
+```c++
+//用<class T>来描述泛型
+template <class T> 
+T GetMax (T a, T b)  { 
+    T result; 
+    result = (a>b)? a : b; 
+    return (result); 
 }
 ```
 
-### 接口编程
+```c++
+int i=5, j=6, k; 
+//生成int类型的函数
+k=GetMax<int>(i,j);
+ 
+long l=10, m=5, n; 
+//生成long类型的函数
+n=GetMax<long>(l,m); 
+```
 
-下面，我们来看段代码，其中是两个方法，它们都是要输出一个结构体，其中一个使用一个函数，另一个使用一个“成员函数”。
+C++ 的编译器会在编译时分析代码，根据不同的变量类型来自动化生成相关类型的函数或类，在 C++ 里，叫模板的具体化。
+
+### Go Generator
+
+要玩 Go 的代码生成，你需要三个东西：
+
+1. 一个函数模板，在里面设置好相应的占位符；
+2. 一个脚本，用于按规则来替换文本并生成新的代码；
+3. 一行注释代码。
 
 ```go
 func PrintPerson(p *Person) {
