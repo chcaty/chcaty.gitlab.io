@@ -15,15 +15,11 @@ date: 2018-03-08 00:02:39
 
 熟练掌握 ASP.NET 开发并熟练使用 .Net Core 进行跨平台开发、熟练使用 MVC 框架、熟悉 Spring.Net, Log4.Net 等框架、熟悉 Web API、WCF 技术，能独立开发基于 Asp.Net Core 的 B/S 系统。
 
-熟悉Dapper，EF等orm框架，Redis；
-
-熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发；
+熟悉Dapper，EF等orm框架，Redis；熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发；有微服务架构相应的技能基础；
 
 熟悉 SQL 语言，熟练使用 SQL Server、Oracle 数据库，掌握数据库设计流程；
 
-熟练使用 HTML、CSS、JavaScript 技术以及 JQuery、Bootstrap、Vue.JS、JQuery EasyUI 等框架进行网页设计；
-
-有微服务架构相应的技能基础。
+熟练使用 HTML、CSS、JavaScript 技术以及 JQuery、Bootstrap、Vue.JS、JQuery EasyUI 等框架进行网页设计。
 
 #### 项目经验
 
@@ -35,7 +31,7 @@ date: 2018-03-08 00:02:39
 
 技术选型
 
-后端接口主要是以.Net Core框架，以MVVP架构为主，用到了EF CORE, Redis, Serilog 等技术。利用Gitlab的cicd技术实现了自动化编译，迁移和发布。每个Serices服务都有对应的集成测试，利用mock数据去进行正向测试，确保接口在正向上是不会存在问题。
+后端接口主要是以.Net Core框架，以MVVP架构为主，用到了EF CORE, Redis, Serilog 等技术。利用Gitlab的cicd技术实现了自动化编译，迁移和发布。每个Serices服务都有对应的集成测试，利用mock数据去进行正向测试，确保接口在正向测试上是不会存在问题。
 
 ##### 高铁快运信息管理系统（2019/12--2020/08）
 
@@ -73,10 +69,6 @@ C#、Winform、DevExpress.
 
 第一阶段（2016/03--2016/5）
 
-开发环境
-
-Windows 10、PhpStorm、Mysql、Github
-
 技术选型
 
 PHP、Mycncart、HTML5、jQuery、Ajax、BootStrap、Node.js
@@ -95,8 +87,6 @@ PHP、Mycncart、HTML5、jQuery、Ajax、BootStrap、Node.js
 
 * 2020/08 -- 至今 深圳市阿铺科技有限公司
 * 2018/08 -- 2020/08 深圳市智腾达软件技术有限公司
-* 2017/02 -- 2017/11 广东中拓信息技术有限公司
-* 2013/09 -- 2018/07 广东医科大学学生
 
 #### 自我评价
 
@@ -107,4 +97,4 @@ PHP、Mycncart、HTML5、jQuery、Ajax、BootStrap、Node.js
 #### 想做的事儿
 
 深入研究 C# 底层原理，阅读 C# 源码；随时了解计算机前沿技术，扎根开源社区，贡献开源项目；
-在学习的同时勤写博客（https://blog.chcaty.cn）记录分享所得所思.
+在学习的同时勤写博客（`https://blog.chcaty.cn`）记录分享所得所思.
