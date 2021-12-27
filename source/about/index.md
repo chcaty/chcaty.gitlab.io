@@ -9,21 +9,23 @@ date: 2018-03-08 00:02:39
 
 #### 基本资料
 
-姓  名：陈家辉 工作经验：3 年 联系邮箱：1120873075@qq.com 联系电话：136-5041-5452
+姓  名：陈家辉 工作经验：3 年半 联系邮箱：1120873075@qq.com 联系电话：136-5041-5452
 
 #### 专业技能
 
-熟练掌握 ASP.NET 开发并熟练使用 .Net Core 进行跨平台开发、熟练使用 MVC 框架、熟悉 Spring.Net, Log4.Net 等框架、熟悉 Web API、WCF 技术，能独立开发基于 Asp.Net Core 的 B/S 系统。
+熟练掌握 ASP.NET 开发，熟练掌握 .Net Core 进行跨平台开发、熟练使用 MVC 框架、熟悉 Spring.Net, Log4.Net，Serilog，AutoMapper 等框架、熟悉 Web API、WCF 技术，能独立开发基于 Asp.Net Core 的 B/S 系统。
 
-熟悉Dapper，EF等orm框架，Redis；熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发；有微服务架构相应的技能基础；
+熟练使用 gitlab cicd 实现 代码的自动化编译和部署，nuget包的自动化版本升级和引用。
 
-熟悉 SQL 语言，熟练使用 SQL Server、Oracle 数据库，掌握数据库设计流程；
+熟练掌握Dapper，EF Core等orm框架，熟练使用 Redis；熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发；有微服务架构相应的技能基础；
+
+熟悉 SQL 语言，熟练使用 SQL Server、Oracle、Sqlite 数据库，掌握数据库设计流程；
 
 熟练使用 HTML、CSS、JavaScript 技术以及 JQuery、Bootstrap、Vue.JS、JQuery EasyUI 等框架进行网页设计。
 
 #### 项目经验
 
-##### 阿铺Up、阿铺商务通以及相应的云管理后台
+##### 阿铺Up、阿铺商务通以及相应的云管理后台（2020/09--至今）
 
 项目介绍
 
@@ -31,7 +33,7 @@ date: 2018-03-08 00:02:39
 
 技术选型
 
-后端接口主要是以.Net Core框架，以MVVP架构为主，用到了EF CORE, Redis, Serilog 等技术。利用Gitlab的cicd技术实现了自动化编译，迁移和发布。每个Serices服务都有对应的集成测试，利用mock数据去进行正向测试，确保接口在正向测试上是不会存在问题。
+后端接口主要是以.Net Core框架，以MVVP架构为主，用到了EF CORE, Redis, Serilog 等技术。利用Gitlab的cicd技术实现了自动化编译，迁移和发布。每个Serices服务都有对应的集成测试，利用mock数据去进行正向测试，确保接口在正向的流程是没有问题的。
 
 ##### 高铁快运信息管理系统（2019/12--2020/08）
 
@@ -47,7 +49,7 @@ C#、Winform、DevExpress.
 
 本人负责全部模块的开发。
 
-##### 永利八达通TMS系统（2019/08--至今）
+##### 永利八达通TMS系统（2019/08--2020/08）
 
 项目介绍
 
@@ -97,4 +99,5 @@ PHP、Mycncart、HTML5、jQuery、Ajax、BootStrap、Node.js
 #### 想做的事儿
 
 深入研究 C# 底层原理，阅读 C# 源码；随时了解计算机前沿技术，扎根开源社区，贡献开源项目；
+学习和了解更多的技术，持续性的拓展技术的
 在学习的同时勤写博客（`https://blog.chcaty.cn`）记录分享所得所思.
