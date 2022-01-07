@@ -1,6 +1,8 @@
 ---
 title: about
 date: 2018-03-08 00:02:39
+type: "about"
+layout: "about"
 ---
 
 ### Resume of Caty
