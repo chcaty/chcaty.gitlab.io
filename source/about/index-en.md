@@ -9,7 +9,7 @@ date: 2018-03-08 00:02:39
 
 #### Basic information
 
-Name：Caty Email：1120873075@qq.com Tel：136-5041-5452 
+Name：Caty Email：1120873075@qq.com Tel：136-5041-5452
 
 #### Professional skills
 
@@ -17,22 +17,23 @@ Name：Caty Email：1120873075@qq.com Tel：136-5041-5452
 Proficiency in using gitlab cicd to automate the compilation and deployment of code, and the automated versioning and referencing of nuget packages.
 Proficiency in Dapper, EF Core and other orm frameworks, proficiency in the use of Redis; proficiency in Winform desktop application development, independent development of Windows PC End-to-end applicationsand development using DevExpress; a foundation of appropriate skills in microservices architecture.
 Familiarity with SQL language, proficiency in using SQL Server, Oracle, Sqlite databases and knowledge ofdatabase design processes.
-Proficiency in web design using HTML, CSS, JavaScript technologies and frameworks such as JQuery, Bootstrap,VueJS, EasyUl, etc.
+Familiarity in web design using HTML, CSS, JavaScript technologies and frameworks such as JQuery, Bootstrap,VueJS, EasyUl, etc.
+Experience working in courier, logistics and freight related industries, familiar with the business of related industries, and have independently developed related freight, quotation and warehouse management modules, and have also independently undertaken the development of a courier management system for a courier company (including but not limited to billing, payment and other regular courier business modules).
 
 #### Project Experience
 
-##### Apu Up, Apu Business Link and the corresponding cloud management backend system (2020/09- present)
+##### Business Link APP and the corresponding cloud management backend system (2020/09- present)
 
 Projects
 The project is mainly divided into listing module, shop module, order module, brokerage module, operation-related modules such as (news push, promotion script and sharing, etc.). The system is mainly empowered by technology to promote efficient and positive linkage between the various stakeholders in the real estate transaction, such as buying clients, brokers and developers.
 
 Technology selection
-.Net Core framework, with an MVVP architecture, using EF CORE. Redis, Serilog and other technologies. Gitlab's cicd technology is used to automate compilation, migration and release. Each Serices service has a corresponding integration test, using mock data to carry out positive testing to ensure that the interface is in the positive process is no problem.
+The back-end interface uses .Net Core, with MVVP architecture, EF CORE, Redis, Serilog and other technologies. Using Gitlab's cicd technology to achieve automated compilation, data migration and release; each Serices service has a corresponding integration test; using the idea of DDD, each business module is independent into a separate nuget, and finally in the unified release. On the one hand, it can realize the splitting of different businesses on line, so that the unrelated businesses will not affect each other, and on the other hand, it can be more convenient to achieve grayscale update.
 
 ##### High Speed Rail Express Information Management System (2019/12 - 2020/08)
 
 Projects
-This project is mainly divided into ten modules (permission management, basic information, billing management. waybill management, material management quotation management, customer service management, order management). This system is mainly designed to provide a more convenient and fast service to the express business of High Speed Rail Express.
+The project is mainly divided into twelve modules (permission management, basic information, billing management, waybill management, material management, quotation management, customer service management, order management, payment management, settlement management). This system is mainly to provide more convenient and fast service to the express business of high-speed railway express, and at the same time realize the transition from paper face sheet to electronic face sheet, after recording the order in the system, directly print the corresponding face sheet, thus reducing the trouble of using paper face sheet and needing to proofread the single number. Settlement management and payment management to ensure that the company will not have too much financial disputes with the franchise network, each deduction and payment are traceable, there will not be no money to join the network has been able to ship the situation, to avoid unnecessary losses.
 
 Technology selection
 C#、Winform、DevExpress.
@@ -43,7 +44,7 @@ I am responsible for the development of all modules.
 ##### Wynn Octopus TMS System (2019-08-2020-08)
 
 Projects
-The project is mainly divided into ten modules (permission management, basic information, business configuration, waybill management, material management, quotation management, operation management, financial management, customer service management, project management). The system is mainly designed to provide a more convenient and efficient service for the TMS business of Yonex Octopus, making the track and operation log of each waybill and the current node clearly visible, while the flexible configuration for quotation also makes the company not to be overwhelmed when switching quotations.
+The project is mainly divided into ten modules (permission management, basic information, business configuration, waybill management, material management, quotation management, operation management, financial management, customer service management, project management). The system is mainly designed to provide a more convenient and efficient service for the TMS business of Yonex Octopus, making the track and operation log of each waybill and the current node clearly visible, while the flexible configuration for quotation also makes the company not to be overwhelmed when switching quotations. Quotation management enables the display of different freight quotations for different time periods and different franchises, while outlets can only view their own quotations. Warehouse management realizes warehouse inventory, inbound and outbound management and warehouse inventory warning, which allows relevant personnel to have a clear understanding of the number of materials in stock and know the final destination of materials. Waybill management involves the docking of Ups, the docking of weighing scales, etc.
 
 Technology selection
 C#、Winform、DevExpress.
@@ -54,18 +55,10 @@ I am mainly responsible for the business configuration, material management, quo
 ##### Hotel Reservation Management System (2016-10-2016-11)
 
 Projects
-It is possible to query the names of all the dishes in the hotel and the corresponding dish numbers; to record the customers who have ordered food, and to query, modify, delete and settle the total amount; to settle the daily turnover and to count the total profit. I am the main programmer of the project and responsible for the core code.
+It is possible to query the names of all the dishes in the hotel and the corresponding dish numbers; to record the customers who have ordered food, and to query, modify, delete and settle the total amount; to settle the daily turnover and to count the total profit. I am the main programmer of the project and responsible for the core code. The Mycncart framework for PHP was chosen as the overall solution for the project. The project was proposed in September 2016, the design of the hotel reservation management system was received in October, and most of the functions of the system were completed in November, and it is running well now. Subsequently added the function of notification and sound alert of new messages in the background, and corresponding email push.
 
-Phase I (2016/03 - 2016/5)
 Technical selection
 PHP、Mycncart、HTML5、jQuery、Ajax、BootStrap、Node.js
-
-Phase Introduction
-This phase is mainly to be able to complete the requirements from the hotel side as soon as possible in order to put it into use, and the Mycncart framework of PHP was chosen as the overall solution of the project. The project was proposed in September 2016, the design of the hotel ordering management system was received in October, and most of the functions of the system were completed in November, and it is running well now.
-
-Phase II（2016/11–2016/11）
-Phase Introduction
-Due to the first phase of some features due to time constraints have not been achieved, coupled with the hotel in the system into use, there are new needs for the system. So on the basis of the original, we added the notification and sound alert of new messages in the background, and the corresponding email push function.
 
 #### Work experience
 
