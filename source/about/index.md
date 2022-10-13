@@ -11,25 +11,23 @@ layout: "about"
 
 #### 基本资料
 
-姓  名：陈家辉 工作经验：3 年半 联系邮箱：1120873075@qq.com 联系电话：136-5041-5452
+姓  名：陈家辉 工作经验：4 年半 联系邮箱：1120873075@qq.com 联系电话：136-5041-5452
 
 #### 专业技能
 
-熟练掌握 ASP.NET 开发，熟练掌握 .Net Core 进行跨平台开发、熟练使用 MVC 框架、熟悉 Spring.Net, Log4.Net，Serilog，AutoMapper 等框架、熟悉 Web API、WCF 技术，能独立开发基于 Asp.Net Core 的 B/S 系统。
+熟练掌握ASP.NET MVC、 .Net Core 进行跨平台开发；熟悉 Spring.Net, Log4.Net，Serilog，AutoMapper 等框架、熟悉 Web API、WCF 技术，能独立开发基于 Asp.Net Core 的 B/S 系统。有微服务架构相应的技能基础。
 
-熟练使用 gitlab cicd 实现 代码的自动化编译和部署，nuget包的自动化版本升级和引用。
+熟练掌握 gitlab cicd 自动化部署流程，曾实现多个项目的自动化编译和部署以及nuget包的自动化版本升级和引用。
 
-熟练掌握Dapper，EF Core等orm框架，熟练使用 Redis；熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发；有微服务架构相应的技能基础；
+熟练掌握Dapper，EF Core等orm框架，熟练使用 Redis；熟练掌握 Winform 桌面程序开发、能独立开发 Windows PC 端应用，并使用 DevExpress 进行开发。
 
-熟悉 SQL 语言，熟练使用 SQL Server、Oracle、Sqlite 数据库，掌握数据库设计流程；
+熟练掌握 SQL 语言，熟悉 SQL Server、Oracle、Sqlite 数据库，精通数据库设计。
 
-可以使用 HTML、CSS、JavaScript 技术以及 JQuery、Bootstrap、Vue.JS、JQuery EasyUI 等框架进行网页设计。
-
-有在快递，物流和货运相关行业工作的经验，熟悉相关行业的业务，并曾独立开发相关的运费，报价，仓管模块，也有独立承担一个快运公司的快递管理系统的开发工作（包括但不仅于结算，货款和其他常规的快递业务模块）。
+有在快递，物流和货运相关行业工作的经验，熟悉相关行业的业务，并曾独立开发相关的运费，报价，仓管模块，也有独立承担一个快运公司的快递管理系统的开发工作。
 
 #### 项目经验
 
-##### 商务通以及相应的云管理后台（2020/09--至今）
+##### 阿铺科技平台相关产品（小程序，app和管理后台等）（2020/09--至今）
 
 项目介绍
 
@@ -37,7 +35,11 @@ layout: "about"
 
 技术选型
 
-后端接口主要是用 .Net Core 语言，以MVVP架构为主，用到了EF CORE, Redis, Serilog 等技术。使用Gitlab的cicd技术实现了自动化编译，数据迁移和发布；每个Serices服务都有对应的集成测试；使用了DDD的思想，将每个业务模块都独立成单独的nuget，最后在统一发布。一方面可以实现将不同业务拆分上线，在没有关联的业务之间不会互相影响，另一方面可以更为方便的实现灰度更新。
+.Net Core，EF CORE, Redis, Serilog，Quartz
+
+职责与工作内容
+
+根据产品原型完成相关模块业务流程代码实现；任务调度服务设计；根据业务数据对接并封装第三方接口；软件系统新架构的设计和演进。
 
 ##### 高铁快运信息管理系统（2019/12--2020/08）
 
@@ -49,7 +51,7 @@ layout: "about"
 
 C#、Winform、DevExpress.
 
-职责领域
+职责与工作内容
 
 本人负责全部模块的开发。
 
@@ -63,7 +65,7 @@ C#、Winform、DevExpress.
 
 C#、Winform、DevExpress.
 
-职责领域
+职责与工作内容
 
 本人主要负责其中的业务配置、物料管理、报价管理以及部分的运单管理。
 
