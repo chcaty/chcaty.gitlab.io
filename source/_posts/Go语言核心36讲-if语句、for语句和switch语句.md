@@ -21,6 +21,7 @@ for i := range numbers1 {
 }
 fmt.Println(numbers1)
 ```
+<!--more-->
 
 我先声明了一个元素类型为int的切片类型的变量numbers1，在该切片中有 6 个元素值，分别是从1到6的整数。我用一条携带range子句的for语句去迭代numbers1变量中的所有元素值。
 

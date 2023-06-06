@@ -13,6 +13,7 @@ tags:
 #### 问题 1：怎样才能让主 goroutine 等待其他 goroutine？
 
 一旦主 goroutine 中的代码执行完毕，当前的 Go 程序就会结束运行，无论其他的 goroutine 是否已经在运行了。那么，怎样才能做到等其他的 goroutine 运行完毕之后，再让主 goroutine 结束运行呢？
+<!--more-->
 
 其实有很多办法可以做到这一点。其中，最简单粗暴的办法就是让主 goroutine“小睡”一会儿。
 
