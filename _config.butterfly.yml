@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 小猫的代码之旅-我的代码知识分享
+title: 小猫的代码之旅
 subtitle: 代码之旅
 description: .Net后台开发工程师
 author: caty
@@ -90,7 +90,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: butterfly
 
 # 中文链接转拼音
 permalink_pinyin:

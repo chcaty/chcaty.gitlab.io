@@ -97,13 +97,6 @@ permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
 
-# 搜索
-search:
-  path: search.xml
-  field: post
-
-
-
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 #deploy:
@@ -175,3 +168,92 @@ neat_js:
   exclude:
 # 压缩博文配置结束
 # 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。
+
+
+# 主题配置
+favicon: https://pic.chcaty.cn/avatar.jpg
+apple_touch_icon: https://pic.chcaty.cn/avatar.jpg
+banner_img: /img/default.png
+force_https: true
+navbar:
+  blog_title: 随记随笔
+  menu:
+    - { key: 'home', link: '/', icon: 'iconfont icon-home-fill' }
+    - { key: 'tag', link: '/tags/', icon: 'iconfont icon-tags-fill' }
+    - { key: 'category', link: '/categories/', icon: 'iconfont icon-category-fill' }
+    - { key: 'links', link: '/links/', icon: 'iconfont icon-link-fill' }
+lazyload:
+  enable: true
+  loading_img: /img/loading.gif
+  onlypost: false
+  offset_factor: 2
+footer:
+  statistics:
+    enable: true
+    source: "busuanzi"  # 可选 leancloud | busuanzi  根据自己需求选择
+    pv_format: "总访问量 {} 次"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    uv_format: "总访客数 {} 人"
+  beian:
+    enable: true 
+    icp_text: ""
+    police_code: "粤ICP备20002392号"
+    police_text: "粤ICP备20002392号"
+    police_icon: "https://pic.chcaty.cn/beian.png"
+index:
+  slogan:
+    enable: true
+    text: 这是一条 Slogan
+    api:
+      enable: true
+      url: "https://v1.hitokoto.cn/?c=f"
+      method: "GET"
+      headers: {}
+      keys: ["hitokoto"]
+  post_url_target: _self
+post:
+  meta:
+    author:  # 作者，优先根据 front-matter 里 author 字段，其次是 hexo 配置中 author 值
+      enable: true
+    date:  # 文章日期，优先根据 front-matter 里 date 字段，其次是 md 文件日期
+      enable: true
+      format: "dddd, MMMM Do YYYY, h:mm a"  # 格式参照 ISO-8601 日期格式化
+    wordcount:  # 字数统计
+      enable: true
+      format: "{} 字"  # 显示的文本，{}是数字的占位符（必须包含)，下同
+    min2read:  # 阅读时间
+      enable: true
+      format: "{} 分钟"
+about:
+  avatar: https://pic.chcaty.cn/avatar.jpg
+  name: "Caty"
+  intro: ".Net 开发工程师"
+  icons:
+    - { class: 'iconfont icon-github-fill', link: 'https://github.com/chcaty', tip: 'GitHub' }
+   # - { class: 'iconfont icon-wechat-fill', qrcode: '/img/favicon.png' }
+links:
+  items:
+    - {
+      title: '玮仔 Wayne',
+      intro: '想和代码谈谈',
+      link: 'https://blog.wayneshao.com/',
+      avatar: 'http://blog.wayneshao.com/images/author.png'
+    }
+    - {
+      title: 'CHUNGLAM LO',
+      intro: 'CHUNGLAM',
+      link: 'https://blog.thunderwink.com/',
+      avatar: 'https://blog.thunderwink.com/img/lam.png'
+    }
+  default_avatar: /img/avatar.png
+code:
+  copy_btn: true
+  highlight:
+    enable: true
+    line_number: true
+    lib: "highlightjs"
+    highlightjs:
+      style: 'Github Gist'
+      bg_color: false
+    prismjs:
+      style: "default"
+      preprocess: true

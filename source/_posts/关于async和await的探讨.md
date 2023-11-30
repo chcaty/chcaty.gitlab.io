@@ -130,7 +130,7 @@ public class Coffee { }
 public class Toast { }
 ```
 
-![执行耗时](https://pic.chcaty.cn/%E5%90%8C%E6%AD%A5%E6%89%A7%E8%A1%8C.png)
+![同步执行耗时](https://pic.chcaty.cn/synchronous-running.png)
 
 同步执行的总耗时是每个任务耗时的总和。此外，因为是同步执行的原因，在开始制作一份早餐的时候，如果此时又有一份制作早餐的请求过来，是不会开始制作的。如果是客户端程序，使用同步执行耗时时间长的操作，会导致UI线程被阻塞，导致UI线程无法响应用户操作，直至操作完成后，UI线程才相应用户的操作。
 
@@ -203,7 +203,7 @@ static Task<Egg> FryEggsAsync(int howMany)
 }
 ```
 
-![执行耗时](https://pic.chcaty.cn/%E7%AE%80%E5%8D%95%E7%9A%84%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C.png)
+![异步执行耗时](https://pic.chcaty.cn/asynchronous-running.png)
 
 上面代码只是为了避免堵塞当前的线程，并没有真正用上异步执行的某些关键功能，所以在耗时上是相差不远的；但是这时候如果在接受了一份制作早餐的请求，还未完成的时候，又有一份制作早餐的请求过来，是可能会开始制作另一份早餐的。
 
@@ -290,11 +290,11 @@ static async Task MakeBreakfastBetterMultiTask()
 
 运行耗时结果如下
 
-![同步运行耗时](https://pic.chcaty.cn/%E5%90%8C%E6%AD%A5%E8%BF%90%E8%A1%8C%E8%80%97%E6%97%B6.png)
+![同步运行耗时](https://pic.chcaty.cn/synchronous-running-time.png)
 
-![异步运行耗时](https://pic.chcaty.cn/%E5%BC%82%E6%AD%A5%E8%BF%90%E8%A1%8C%E8%80%97%E6%97%B6.png)
+![异步运行耗时](https://pic.chcaty.cn/asynchronous-running-time.png)
 
-![并行运行耗时](https://pic.chcaty.cn/%E5%B9%B6%E8%A1%8C%E8%BF%90%E8%A1%8C%E8%80%97%E6%97%B6.png)
+![并行运行耗时](https://pic.chcaty.cn/parallel-running-time.png)
 
 相比之下，显然能看出来之间的运行耗时差别还是有点大的。
 
