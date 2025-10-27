@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # 获取所有历史记录
+          submodules: false  # 如果没有子模块，设为 false
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
