@@ -1,11 +1,14 @@
 ---
 title: Asp.Net Core Cookies和Session
 date: 2019-07-01 23:35:38
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Cookies
+ - 后端开发
+ - .NET
+ - ASP.NET Core
  - Session
+ - Cookies
+
 ---
 #### 概述
 

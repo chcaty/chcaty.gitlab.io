@@ -1,10 +1,12 @@
 ---
 title: .Net Log4net封装
 date: 2018-03-06 12:26:10
-categories: .Net
-tags: 
- - .Net
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
  - Log4net
+
 ---
 log4net是.Net下一个非常优秀的开源日志记录组件。log4net记录日志的功能非常强大。它可以将日志分不同的等级，以不同的格式，输出到不同的媒介。
 封装如下

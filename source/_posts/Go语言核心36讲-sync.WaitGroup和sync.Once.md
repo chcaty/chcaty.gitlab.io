@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-sync.WaitGroup和sync.Once
 date: 2021-11-26 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 之前在一些场合下里，我们使用通道的方式看起来都似乎有些蹩脚。

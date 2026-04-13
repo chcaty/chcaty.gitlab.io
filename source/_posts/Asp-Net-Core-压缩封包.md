@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core 压缩封包
 date: 2019-08-10 15:04:49
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Gzip
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 #### 简介
 

@@ -1,11 +1,12 @@
 ---
 title: 左耳听风-Go语言编程模式：Go Generation
 date: 2021-10-18 23:43:58
-categories: 笔记
-tags: 
- - 笔记
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - 左耳听风
- - go
+
 ---
 
 ### 前言

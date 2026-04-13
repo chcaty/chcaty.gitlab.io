@@ -1,10 +1,11 @@
 ---
 title: LeedCode 摩尔投票
 date: 2021-07-09 15:17:15
-categories: LeedCode
+categories: 算法
 tags:
- - LeedCode
  - 算法
+ - LeetCode
+
 ---
 
 ### 题目

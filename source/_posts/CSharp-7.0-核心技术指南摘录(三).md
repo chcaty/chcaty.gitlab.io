@@ -1,12 +1,11 @@
 ---
 title: CSharp 7.0 核心技术指南摘录(三)
 date: 2019-08-19 23:14:58
-categories: C#
+categories: 编程语言
 tags:
+ - 编程语言
  - C#
- - 摘录
- - 解构器
- - 委托
+
 ---
 ### 解构器
 

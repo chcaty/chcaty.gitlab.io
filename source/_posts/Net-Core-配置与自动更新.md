@@ -1,9 +1,11 @@
 ---
 title: .Net Core 配置与自动更新
 date: 2018-03-07 22:27:31
-categories: .Net Core
-tags: 
- - .Net Core
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
+
 ---
 .Net Core将之前Web. Config中的配置迁移到了appsettings.json文件中，并使用ConfigurationBuilder来读取该配置文件可设置在设置文件变化后自动重新加载，避免了重启程序。
 <!--more-->

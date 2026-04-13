@@ -1,10 +1,10 @@
 ---
 title: 微服务-Consul学习(二)
 date: 2019-03-11 23:43:58
-categories: 微服务
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
  - 微服务
+
 ---
 上一次学习到了在命令行如何去启动和注册服务.今天学习如何通过Consul Api 接口注册服务.
 <!--more-->

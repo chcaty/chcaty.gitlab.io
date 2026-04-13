@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-if语句、for语句和switch语句
 date: 2021-11-11 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 ### 今天的问题是：使用携带range子句的for语句时需要注意哪些细节？

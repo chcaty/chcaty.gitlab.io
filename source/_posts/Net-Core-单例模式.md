@@ -1,10 +1,12 @@
 ---
 title: .Net Core 单例模式
 date: 2018-06-11 19:49:03
-categories : .Net Core
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
+ - 架构设计
+ - .NET
  - 设计模式
+
 ---
 
 ##### 单例模式的定义

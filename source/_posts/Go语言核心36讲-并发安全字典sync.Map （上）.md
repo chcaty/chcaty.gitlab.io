@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-并发安全字典sync.Map （上）
 date: 2021-11-30 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 今天再来讲一个并发安全的高级数据结构：sync.Map。众所周知，Go 语言自带的字典类型map并不是并发安全的。

@@ -1,10 +1,13 @@
 ---
 title: Asp.Net Core Web API的先进架构
 date: 2018-06-21 23:58:04
-categories: .Net Core
+categories: 架构设计
 tags:
- - .Net Core
- - Web API
+ - 架构设计
+ - .NET
+ - ASP.NET Core
+ - 架构
+
 ---
 ##### 架构分层
 

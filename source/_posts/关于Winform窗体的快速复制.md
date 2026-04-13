@@ -1,10 +1,10 @@
 ---
 title: 关于Winform窗体的快速复制
 date: 2019-03-21 22:55:57
-categories: C# 
-tags: 
- - 复制
- - C#
+categories: 后端开发
+tags:
+ - 后端开发
+
 ---
 ## 起因
 

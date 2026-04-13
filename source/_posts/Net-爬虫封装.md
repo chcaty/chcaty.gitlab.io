@@ -1,10 +1,11 @@
 ---
 title: .Net 爬虫封装
 date: 2018-03-06 23:17:26
-categories: .Net
-tags: 
- - .Net
- - Spider
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
+
 ---
 “爬虫”就是一段用来自动化采集网站数据的程序。
 <!--more-->

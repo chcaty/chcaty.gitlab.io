@@ -1,10 +1,10 @@
 ---
 title: 微服务-Consul学习
 date: 2019-03-05 23:18:12
-categories: 微服务
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
  - 微服务
+
 ---
 #### Consul介绍
 

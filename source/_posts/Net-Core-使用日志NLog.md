@@ -1,10 +1,12 @@
 ---
 title: .Net Core 使用日志NLog
 date: 2018-03-16 21:40:12
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
+ - 后端开发
+ - .NET
  - NLog
+
 ---
 将 ASP.Net Core 提供的默认日志提供程序替换成 NLog。
 <!--more-->

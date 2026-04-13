@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-sync.Mutex与sync.RWMutex
 date: 2021-11-23 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 从本篇文章开始，我们将一起探讨 Go 语言自带标准库中一些比较核心的代码包。这会涉及这些代码包的标准用法、使用禁忌、背后原理以及周边的知识。

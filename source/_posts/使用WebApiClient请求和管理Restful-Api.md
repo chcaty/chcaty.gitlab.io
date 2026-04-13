@@ -1,10 +1,12 @@
 ---
 title: 使用WebApiClient请求和管理Restful Api
 date: 2018-03-10 22:06:47
-categories: .Net
+categories: 后端开发
 tags:
- - .Net
- - Web Api
+ - 后端开发
+ - .NET
+ - Web-API
+
 ---
 WebApiClient的出现,大幅度减轻了接口调用者的工作量,而且在调用Http接口上还非常容易维护和更新,还可以轻松应付设计不太友好的一些Http接口
 

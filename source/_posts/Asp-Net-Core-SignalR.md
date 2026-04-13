@@ -1,10 +1,13 @@
 ---
 title: Asp.Net Core SignalR
 date: 2019-07-29 21:55:26
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
+ - 后端开发
+ - .NET
+ - ASP.NET Core
  - SignalR
+
 ---
 SignalR 是一套能让Asp.Net Core 轻松实现与Client即时互动的套件.
 <!--more-->

@@ -1,10 +1,13 @@
 ---
 title: Asp.Net Core中使用Session
 date: 2018-03-11 00:18:04
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
+ - 后端开发
+ - .NET
+ - ASP.NET Core
  - Session
+
 ---
 
 ##### 添加Session

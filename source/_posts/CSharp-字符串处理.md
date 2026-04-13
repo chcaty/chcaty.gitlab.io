@@ -1,10 +1,11 @@
 ---
 title: CSharp-字符串处理
 date: 2019-04-03 22:59:11
-categories: C# 
-tags: 
- - 基础
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+
 ---
 
 ### 字符串处理

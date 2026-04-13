@@ -1,11 +1,12 @@
 ---
 title: 左耳听风-Go编程模式：委托和反转控制
 date: 2021-10-15 23:43:58
-categories: 笔记
-tags: 
- - 笔记
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - 左耳听风
- - go
+
 ---
 
 ### 前言

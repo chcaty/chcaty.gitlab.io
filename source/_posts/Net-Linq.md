@@ -1,10 +1,12 @@
 ---
 title: .Net Linq
 date: 2019-07-16 21:47:47
-categories: .Net
+categories: 后端开发
 tags:
- - .Net
+ - 后端开发
+ - .NET
  - Linq
+
 ---
 #### Linq简介
 

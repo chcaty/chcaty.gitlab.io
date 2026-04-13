@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core REST API基础
 date: 2018-06-08 15:37:04
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - REST API
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 #### 前言
 

@@ -1,11 +1,11 @@
 ---
 title: CSharp-利用委托解决跨线程操作控件产生的问题
 date: 2018-03-14 22:47:19
-categories: C# 
-tags: 
- - 委托
- - winform
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+
 ---
 ```cs
 private delegate void AddVirus(string name);  

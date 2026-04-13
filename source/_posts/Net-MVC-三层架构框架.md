@@ -1,10 +1,12 @@
 ---
 title: .Net MVC 三层架构框架
 date: 2018-03-10 01:23:10
-categories: .Net
+categories: 架构设计
 tags:
- - .Net
- - MVC
+ - 架构设计
+ - .NET
+ - 架构
+
 ---
 asp.net+ef mvc三层框架搭建过程如下
 

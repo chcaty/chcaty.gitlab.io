@@ -1,10 +1,11 @@
 ---
 title: 'CSharp-常用关键字和基础类'
 date: 2019-03-30 23:41:06
-categories: C#
+categories: 编程语言
 tags:
+ - 编程语言
  - C#
- - 基础
+
 ---
 
 #### abstract关键字-抽象类

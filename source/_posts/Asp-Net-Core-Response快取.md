@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core Response快取
 date: 2019-08-10 15:00:47
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Response
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 #### .Net Core Response简介
 

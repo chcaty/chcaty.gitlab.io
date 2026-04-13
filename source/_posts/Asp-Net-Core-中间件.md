@@ -1,10 +1,13 @@
 ---
 title: Asp.Net Core 中间件
 date: 2019-06-25 23:39:29
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Middleware
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+ - 中间件
+
 ---
 #### 定义
 

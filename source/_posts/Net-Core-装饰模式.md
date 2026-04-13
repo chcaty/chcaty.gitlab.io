@@ -1,10 +1,12 @@
 ---
 title: .Net Core 装饰模式
 date: 2018-04-05 23:14:57
-categories: .Net Core
+categories: 架构设计
 tags:
- - .Net Core
+ - 架构设计
+ - .NET
  - 设计模式
+
 ---
 
 ##### 装饰模式的定义

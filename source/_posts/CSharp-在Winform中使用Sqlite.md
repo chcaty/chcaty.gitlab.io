@@ -1,10 +1,12 @@
 ---
 title: 'CSharp-在Winform中使用Sqlite'
 date: 2018-12-11 22:48:20
-categories: C# 
-tags: 
- - Sqlite
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+ - Sqlite
+
 ---
 近期了解了一下Sqlite数据库, 便想把之前写的一个爬虫项目的数据库里添加Sqlite支持, 一开始想着用EF去完成的, 后面尝试过后, 发现EF用起来并不是那么方便, 就改成用Sqlite的ORM框架, 这里采用的是sqlite-net-pcl, nuget查找sqlite-net-pcl并选择即可.
 <!--more-->

@@ -1,10 +1,11 @@
 ---
 title: .Net Core 创建项目模板文件
 date: 2021-09-27 22:08:42
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - 项目模板
+ - 后端开发
+ - .NET
+
 ---
 
 ### 前言

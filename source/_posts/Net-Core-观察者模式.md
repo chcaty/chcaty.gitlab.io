@@ -1,10 +1,12 @@
 ---
 title: .Net Core 观察者模式
 date: 2018-04-05 22:27:26
-categories : .Net Core
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
+ - 架构设计
+ - .NET
  - 设计模式
+
 ---
 
 ##### 观察者模式的定义

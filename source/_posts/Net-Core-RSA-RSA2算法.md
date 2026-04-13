@@ -1,10 +1,12 @@
 ---
 title: .Net Core RSA/RSA2算法
 date: 2018-03-08 18:24:12
-categories: .Net Core
+categories: 算法
 tags:
- - .Net Core
- - RSA算法
+ - 算法
+ - .NET
+ - RSA
+
 ---
 RSA2是在原来SHA1WithRSA签名算法的基础上, 新增了支持SHA256WithRSA的签名算法. 该算法比该SHA1WithRSA有更强的安全能力.
 <!--more-->

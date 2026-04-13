@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-go语句及其执行规则（下）
 date: 2021-11-10 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 ### 知识扩展

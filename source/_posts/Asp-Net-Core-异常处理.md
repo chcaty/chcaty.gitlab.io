@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core 异常处理
 date: 2019-07-13 22:34:02
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Exception
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 异常处理在程序开发中也是一个比较重要的事,一方面可以避免暴露不该暴露的东西,另一方面也在出现问题时,可以及时的定位到异常发生的位置.
 <!--more-->

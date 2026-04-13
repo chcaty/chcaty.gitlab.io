@@ -1,10 +1,11 @@
 ---
 title: IdentityServer4 ClientCredential模式
 date: 2019-11-02 12:48:58
-categories: .Net Core
+categories: 架构设计
 tags:
- - .Net Core
+ - 微服务
  - IdentityServer4
+
 ---
 #### 使用客户端认证保护Api
 

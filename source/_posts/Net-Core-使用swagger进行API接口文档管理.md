@@ -1,10 +1,12 @@
 ---
 title: .Net Core 使用swagger进行API接口文档管理
 date: 2018-03-11 22:20:31
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - WebApi
+ - 后端开发
+ - .NET
+ - Swagger
+
 ---
 
 ##### 什么是Swagger

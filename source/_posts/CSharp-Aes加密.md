@@ -1,10 +1,12 @@
 ---
 title: CSharp-Aes加密
 date: 2019-05-27 21:55:14
-categories: C# 
-tags: 
- - 加密
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+ - AES
+
 ---
 
 #### 起源

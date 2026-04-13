@@ -1,10 +1,12 @@
 ---
 title: .Net Core Ocelot
 date: 2018-03-29 18:15:26
-categories: .Net Core
+categories: 架构设计
 tags:
- - .Net Core
+ - 微服务
+ - .NET
  - Ocelot
+
 ---
 Ocelot是一个用.Net Core实现并且开源的API网关, 它功能强大, 包括了：路由、请求聚合、服务发现、认证、鉴权、限流熔断，并内置了负载均衡器与Service Fabric、Butterfly Tracing集成。
 <!--more-->

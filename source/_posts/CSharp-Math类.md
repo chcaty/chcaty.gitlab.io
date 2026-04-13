@@ -1,10 +1,11 @@
 ---
 title: 'CSharp-Math类'
 date: 2019-04-02 22:27:45
-categories: C# 
-tags: 
- - 基础
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+
 ---
 
 ### Math类

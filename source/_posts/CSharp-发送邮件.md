@@ -1,10 +1,11 @@
 ---
 title: CSharp-发送邮件
 date: 2019-05-30 00:08:16
-categories: C# 
-tags: 
- - 邮件
+categories: 编程语言
+tags:
+ - 编程语言
  - C#
+
 ---
 
 #### 起源

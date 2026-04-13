@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-条件变量sync.Cond（下）
 date: 2021-11-24 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 ### 知识扩展

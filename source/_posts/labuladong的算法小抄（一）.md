@@ -1,10 +1,11 @@
 ---
 title: labuladong的算法小抄（一）
 date: 2021-07-12 14:41:06
-categories: 读书笔记
+categories: 算法
 tags:
- - 读书笔记
- - 技术
+ - 算法
+ - LeetCode
+
 ---
 
 ### 学习算法和刷题的框架思维

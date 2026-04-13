@@ -1,10 +1,12 @@
 ---
 title: Wcf创建Http和Webservice接口
 date: 2018-03-09 23:37:05
-categories: .Net
-tags: 
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
  - WCF
- - .Net
+
 ---
 不需要部署在iis上，直接打开exe程序即可开启接口。
 同时支持创建一个支持http请求和Webservice接口的wcf服务

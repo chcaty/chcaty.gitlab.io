@@ -1,10 +1,10 @@
 ---
 title: EF Core实现DB First和Code First
 date: 2018-06-10 21:38:41
-categories: .Net Core
-tags: 
- - .Net Core
- - EF Core
+categories: 后端开发
+tags:
+ - 后端开发
+
 ---
 
 ##### 安装 Entity Framework Core

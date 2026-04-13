@@ -1,10 +1,11 @@
 ---
 title:  .Net Core Mock MediatR
 date: 2021-09-22 23:33:57
-categories: .Net Core 
-tags: 
- - MediatR
- - .Net Core
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
+
 ---
 ### 前言
 

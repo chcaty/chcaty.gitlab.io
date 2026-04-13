@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core Url 重写
 date: 2019-06-25 23:49:06
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Url 重写
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 #### Url重写的引用
 

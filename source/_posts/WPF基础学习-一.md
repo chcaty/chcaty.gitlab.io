@@ -1,10 +1,12 @@
 ---
 title: WPF基础学习(一)
 date: 2020-03-28 11:19:45
-categories: .Net
+categories: 后端开发
 tags:
- - .Net
+ - 后端开发
+ - .NET
  - WPF
+
 ---
 > 作者：Peter Luo 出处：`https://www.cnblogs.com/Peter-Luo/`
 

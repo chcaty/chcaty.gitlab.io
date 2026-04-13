@@ -1,10 +1,12 @@
 ---
 title: Asp.Net Core 模型绑定
 date: 2019-06-26 23:46:33
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Model
+ - 后端开发
+ - .NET
+ - ASP.NET Core
+
 ---
 #### 概述
 

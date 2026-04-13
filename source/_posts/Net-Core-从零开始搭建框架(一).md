@@ -1,12 +1,11 @@
 ---
 title: .Net Core-从零开始搭建框架(一)
 date: 2019-02-21 23:27:08
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
- - Swagger
- - 框架
- - Dapper
+ - 后端开发
+ - .NET
+
 ---
 之前一直想学习一下用Vs Code开发, 趁着最近有做一个小项目的想法, 顺路学习一下
 <!--more-->

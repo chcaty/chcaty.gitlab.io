@@ -1,10 +1,12 @@
 ---
 title:  .Net Core nuget包版本自动升级实现
 date: 2021-08-22 23:33:57
-categories: C# 
-tags: 
- - nuget
- - C#
+categories: 后端开发
+tags:
+ - 后端开发
+ - .NET
+ - NuGet
+
 ---
 ### 前言
 

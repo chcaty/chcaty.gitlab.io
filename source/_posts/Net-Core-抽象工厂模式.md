@@ -1,10 +1,12 @@
 ---
 title: .Net Core 抽象工厂模式
 date: 2018-04-16 20:03:13
-categories : .Net Core
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
+ - 架构设计
+ - .NET
  - 设计模式
+
 ---
 
 ##### 抽象工厂的定义

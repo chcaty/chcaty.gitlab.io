@@ -1,10 +1,13 @@
 ---
 title: Asp.Net Core WebSocket
 date: 2018-03-20 21:26:28
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
+ - 后端开发
+ - .NET
+ - ASP.NET Core
  - WebSocket
+
 ---
 
 ##### WebSocket是什么

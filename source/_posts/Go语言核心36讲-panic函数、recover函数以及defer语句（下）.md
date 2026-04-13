@@ -1,11 +1,12 @@
 ---
 title: Go语言核心36讲-panic函数、recover函数以及defer语句（下）
 date: 2021-11-22 23:43:58
-categories: 笔记
-tags: 
- - 笔记
- - go
+categories: 编程语言
+tags:
+ - 编程语言
+ - Go
  - Go语言核心36讲
+
 ---
 
 panic 之中可以包含一个值，用于简要解释引发此 panic 的原因。

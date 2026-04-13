@@ -1,10 +1,12 @@
 ---
 title: .Net Core MVC 三层架构框架
 date: 2018-03-06 23:41:49
-categories: .Net Core
+categories: 架构设计
 tags:
- - .Net Core
- - MVC
+ - 架构设计
+ - .NET
+ - 架构
+
 ---
 Asp.Net Core 出来也很长时间, 研究了一段时间, 并基于Asp.Net Core + EF Core搭建了一个MVC的三层结构, 其中用到了依赖注入和控制反转
 <!--more-->

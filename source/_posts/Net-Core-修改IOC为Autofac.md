@@ -1,10 +1,12 @@
 ---
 title: .Net Core 修改IOC为Autofac
 date: 2018-03-17 09:42:34
-categories: .Net Core
+categories: 后端开发
 tags:
- - .Net Core
+ - 后端开发
+ - .NET
  - Autofac
+
 ---
 本文主要讲解如何更换Asp.Net Core的IOC为Autofac
 <!--more-->

@@ -1,10 +1,12 @@
 ---
 title: .Net Core 简单工厂和工厂方法模式
 date: 2018-04-14 21:35:44
-categories : .Net Core
-tags: 
- - .Net Core
+categories: 架构设计
+tags:
+ - 架构设计
+ - .NET
  - 设计模式
+
 ---
 
 ##### 简单工厂的定义
