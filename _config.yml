@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 小猫的代码之旅-我的代码知识分享
-subtitle: 代码之旅
+title: 我想探索一下世界
+subtitle: 想到啥就写点啥
 description: .Net后台开发工程师
 author: caty
 language: zh-CN
@@ -90,7 +90,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: shiro
 
 # 中文链接转拼音
 permalink_pinyin:
@@ -157,21 +157,21 @@ live2d:
 
 # hexo-neat
 # 博文压缩
-neat_enable: true
-# 压缩html
-neat_html:
-  enable: true
-  exclude:  #排除的文件
-# 压缩css  跳过min.css
-neat_css:
-  enable: true
-  exclude:
-# 压缩js 跳过min.js
-neat_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude:
+# neat_enable: true
+# # 压缩html
+# neat_html:
+#   enable: true
+#   exclude:  #排除的文件
+# # 压缩css  跳过min.css
+# neat_css:
+#   enable: true
+#   exclude:
+# # 压缩js 跳过min.js
+# neat_js:
+#   enable: true
+#   mangle: true
+#   output:
+#   compress:
+#   exclude:
 # 压缩博文配置结束
 # 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。
